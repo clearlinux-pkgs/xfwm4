@@ -1,0 +1,30 @@
+From 9703a35a567e4bb8dc9fbbb2605afc54d62e9b19 Mon Sep 17 00:00:00 2001
+From: Ikey Doherty <michael.i.doherty@intel.com>
+Date: Tue, 5 May 2015 14:20:11 +0100
+Subject: [PATCH] Set default visual styling
+
+Signed-off-by: Ikey Doherty <michael.i.doherty@intel.com>
+---
+ defaults/defaults | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+diff --git a/defaults/defaults b/defaults/defaults
+index 2b1ba5b..58a407a 100644
+--- a/defaults/defaults
++++ b/defaults/defaults
+@@ -53,10 +53,10 @@ snap_to_border=true
+ snap_to_windows=false
+ snap_width=10
+ sync_to_vblank=false
+-theme=Default
++theme=Vertex
+ tile_on_move=true
+ title_alignment=center
+-title_font=Sans Bold 9
++title_font=Clear Sans Bold 9
+ title_horizontal_offset=0
+ titleless_maximize=false
+ title_shadow_active=false
+-- 
+1.9.1
+
