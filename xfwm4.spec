@@ -4,7 +4,7 @@
 #
 Name     : xfwm4
 Version  : 4.12.3
-Release  : 7
+Release  : 8
 URL      : http://archive.xfce.org/src/xfce/xfwm4/4.12/xfwm4-4.12.3.tar.bz2
 Source0  : http://archive.xfce.org/src/xfce/xfwm4/4.12/xfwm4-4.12.3.tar.bz2
 Summary  : No detailed summary available
@@ -67,6 +67,9 @@ locales components for the xfwm4 package.
 make V=1  %{?_smp_mflags}
 
 %check
+export http_proxy=http://127.0.0.1:9/
+export https_proxy=http://127.0.0.1:9/
+export no_proxy=localhost
 make VERBOSE=1 V=1 %{?_smp_mflags} check
 
 %install
