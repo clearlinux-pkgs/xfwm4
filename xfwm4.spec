@@ -4,7 +4,7 @@
 #
 Name     : xfwm4
 Version  : 4.12.3
-Release  : 11
+Release  : 12
 URL      : http://archive.xfce.org/src/xfce/xfwm4/4.12/xfwm4-4.12.3.tar.bz2
 Source0  : http://archive.xfce.org/src/xfce/xfwm4/4.12/xfwm4-4.12.3.tar.bz2
 Summary  : No detailed summary available
@@ -14,12 +14,16 @@ Requires: xfwm4-bin
 Requires: xfwm4-data
 Requires: xfwm4-locales
 BuildRequires : intltool
+BuildRequires : pkgconfig(dbus-1)
+BuildRequires : pkgconfig(dbus-glib-1)
 BuildRequires : pkgconfig(gtk+-2.0)
 BuildRequires : pkgconfig(ice)
 BuildRequires : pkgconfig(libdrm)
 BuildRequires : pkgconfig(libwnck-1.0)
+BuildRequires : pkgconfig(libxfce4kbd-private-2)
 BuildRequires : pkgconfig(libxfce4ui-1)
 BuildRequires : pkgconfig(libxfce4util-1.0)
+BuildRequires : pkgconfig(libxfconf-0)
 BuildRequires : pkgconfig(sm)
 BuildRequires : pkgconfig(xcomposite)
 BuildRequires : pkgconfig(xdamage)
@@ -63,10 +67,19 @@ locales components for the xfwm4 package.
 %patch1 -p1
 
 %build
+export LANG=C
+export AR=gcc-ar
+export RANLIB=gcc-ranlib
+export NM=gcc-nm
+export CFLAGS="$CFLAGS -fno-semantic-interposition -falign-functions=32 -O3 -flto "
+export FCFLAGS="$CFLAGS -fno-semantic-interposition -falign-functions=32 -O3 -flto "
+export FFLAGS="$CFLAGS -fno-semantic-interposition -falign-functions=32 -O3 -flto "
+export CXXFLAGS="$CXXFLAGS -fno-semantic-interposition -falign-functions=32 -O3 -flto "
 %configure --disable-static
 make V=1  %{?_smp_mflags}
 
 %check
+export LANG=C
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost
