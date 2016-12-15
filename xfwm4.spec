@@ -4,7 +4,7 @@
 #
 Name     : xfwm4
 Version  : 4.12.3
-Release  : 14
+Release  : 15
 URL      : http://archive.xfce.org/src/xfce/xfwm4/4.12/xfwm4-4.12.3.tar.bz2
 Source0  : http://archive.xfce.org/src/xfce/xfwm4/4.12/xfwm4-4.12.3.tar.bz2
 Summary  : No detailed summary available
@@ -68,10 +68,13 @@ locales components for the xfwm4 package.
 
 %build
 export LANG=C
-export CFLAGS="$CFLAGS -O3 -falign-functions=32 -fno-semantic-interposition "
-export FCFLAGS="$CFLAGS -O3 -falign-functions=32 -fno-semantic-interposition "
-export FFLAGS="$CFLAGS -O3 -falign-functions=32 -fno-semantic-interposition "
-export CXXFLAGS="$CXXFLAGS -O3 -falign-functions=32 -fno-semantic-interposition "
+export AR=gcc-ar
+export RANLIB=gcc-ranlib
+export NM=gcc-nm
+export CFLAGS="$CFLAGS -O3 -falign-functions=32 -flto -fno-semantic-interposition "
+export FCFLAGS="$CFLAGS -O3 -falign-functions=32 -flto -fno-semantic-interposition "
+export FFLAGS="$CFLAGS -O3 -falign-functions=32 -flto -fno-semantic-interposition "
+export CXXFLAGS="$CXXFLAGS -O3 -falign-functions=32 -flto -fno-semantic-interposition "
 %configure --disable-static
 make V=1  %{?_smp_mflags}
 
