@@ -4,7 +4,7 @@
 #
 Name     : xfwm4
 Version  : 4.13.0
-Release  : 19
+Release  : 20
 URL      : http://archive.xfce.org/src/xfce/xfwm4/4.13/xfwm4-4.13.0.tar.bz2
 Source0  : http://archive.xfce.org/src/xfce/xfwm4/4.13/xfwm4-4.13.0.tar.bz2
 Summary  : No detailed summary available
@@ -26,6 +26,8 @@ BuildRequires : pkgconfig(libxfce4util-1.0)
 BuildRequires : pkgconfig(libxfconf-0)
 BuildRequires : pkgconfig(sm)
 BuildRequires : pkgconfig(xcomposite)
+BuildRequires : pkgconfig(xdamage)
+BuildRequires : pkgconfig(xfixes)
 BuildRequires : pkgconfig(xpresent)
 BuildRequires : pkgconfig(xrender)
 Patch1: 0001-Set-default-visual-styling.patch
@@ -66,27 +68,30 @@ locales components for the xfwm4 package.
 %patch1 -p1
 
 %build
+export http_proxy=http://127.0.0.1:9/
+export https_proxy=http://127.0.0.1:9/
+export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1492373370
+export SOURCE_DATE_EPOCH=1517703639
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
 export NM=gcc-nm
-export CFLAGS="$CFLAGS -O3 -falign-functions=32 -ffat-lto-objects -flto -fno-semantic-interposition "
-export FCFLAGS="$CFLAGS -O3 -falign-functions=32 -ffat-lto-objects -flto -fno-semantic-interposition "
-export FFLAGS="$CFLAGS -O3 -falign-functions=32 -ffat-lto-objects -flto -fno-semantic-interposition "
-export CXXFLAGS="$CXXFLAGS -O3 -falign-functions=32 -ffat-lto-objects -flto -fno-semantic-interposition "
+export CFLAGS="$CFLAGS -O3 -falign-functions=32 -ffat-lto-objects -flto=4 -fno-math-errno -fno-semantic-interposition -fno-trapping-math "
+export FCFLAGS="$CFLAGS -O3 -falign-functions=32 -ffat-lto-objects -flto=4 -fno-math-errno -fno-semantic-interposition -fno-trapping-math "
+export FFLAGS="$CFLAGS -O3 -falign-functions=32 -ffat-lto-objects -flto=4 -fno-math-errno -fno-semantic-interposition -fno-trapping-math "
+export CXXFLAGS="$CXXFLAGS -O3 -falign-functions=32 -ffat-lto-objects -flto=4 -fno-math-errno -fno-semantic-interposition -fno-trapping-math "
 %configure --disable-static
-make V=1  %{?_smp_mflags}
+make  %{?_smp_mflags}
 
 %check
 export LANG=C
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
-export no_proxy=localhost
+export no_proxy=localhost,127.0.0.1,0.0.0.0
 make VERBOSE=1 V=1 %{?_smp_mflags} check
 
 %install
-export SOURCE_DATE_EPOCH=1492373370
+export SOURCE_DATE_EPOCH=1517703639
 rm -rf %{buildroot}
 %make_install
 %find_lang xfwm4
