@@ -1,4 +1,2401 @@
-commit a46bb001f339d5988b0cda12f7672c5a7e213abd
+commit dd77a7f024a9800aa00b84c83b5d6329788886f6
+Author: Olivier Fourdan <fourdan@xfce.org>
+Date:   Sun Jul 29 15:13:17 2018 +0200
+
+    Release 4.13.1!
+    
+    Signed-off-by: Olivier Fourdan <fourdan@xfce.org>
+
+commit 942156e40b1728141c56d19ebfb0c3a721c39c19
+Author: Anonymous <noreply@xfce.org>
+Date:   Fri Jul 27 18:32:36 2018 +0200
+
+    I18n: Update translation lt (100%).
+    
+    169 translated messages.
+    
+    Transifex (https://www.transifex.com/xfce/public/).
+
+commit 642275e9d795e9f2cba78df7e3e92485955638a6
+Author: Olivier Fourdan <fourdan@xfce.org>
+Date:   Mon Jul 23 22:45:48 2018 +0200
+
+    compositor: Add support for NET_WM_BYPASS_COMPOSITOR
+    
+    Bug 12434
+    
+    This only applies to fullscreen windows.
+
+commit 5f7a1f5f91fd0eec91a4a88c669847fd2567a270
+Author: Olivier Fourdan <fourdan@xfce.org>
+Date:   Sun Jul 22 10:58:42 2018 +0200
+
+    client: Check GTK_HIDE_TITLEBAR_WHEN_MAXIMIZED
+    
+    Check that value for GTK_HIDE_TITLEBAR_WHEN_MAXIMIZED has actually
+    changed before reconfiguring the window.
+
+commit 0a5ba680f27a48242d52c590727deb837708da09
+Author: Olivier Fourdan <fourdan@xfce.org>
+Date:   Sun Jul 22 10:54:35 2018 +0200
+
+    client: Check when GTK_FRAME_EXTENTS has changed
+    
+    Bug: 14511
+    
+    GTK+ will update its GTK_FRAME_EXTENTS property continuously even when
+    the value hasn't actually changed, which causes the maximized state to
+    be cleared when transitioning to/from fullscreen to maximized.
+    
+    Check that he extents have changed and reconfigure the client's window
+    only when the value has changed.
+
+commit 5e1354886ae9b22c0fe86ba695ed7f0a63fed14e
+Author: Olivier Fourdan <fourdan@xfce.org>
+Date:   Wed Jul 18 15:28:23 2018 +0200
+
+    netwm: Fix adding maximized state
+    
+    Bug 14514
+    
+    xfwm4 would fail to add maximized states using extended window manager
+    hints mechanisms.
+
+commit ed809a2242e598c665eece910fb64961d4114068
+Author: Ivailo Panamski <ipanamski@gmail.com>
+Date:   Sun Jul 22 06:33:38 2018 +0200
+
+    I18n: Update translation bg (100%).
+    
+    169 translated messages.
+    
+    Transifex (https://www.transifex.com/xfce/public/).
+
+commit 9392f50e2d8e8568fc54a400fa310c7e02a76080
+Author: Stephane Gourichon <stephane.gourichon@fidergo.fr>
+Date:   Wed Jul 18 13:36:56 2018 +0200
+
+    Fix build out of tree
+    
+    Bug 14542
+    
+    glib-compile-resource needs to be told where to find its resources when
+    building out of tree.
+
+commit dc1610147ddfc77df40cf24c88c8083f24e531ef
+Author: Olivier Fourdan <fourdan@xfce.org>
+Date:   Tue Jul 17 11:45:15 2018 +0200
+
+    compositor: Skip ARGB10 GLX configs
+    
+    Bug: 14475
+    
+    Skip ARGB10 GLX configs as it won't work well.
+
+commit 8c081c75fbb90e41bb0c56681ca3c155db1f1e37
+Author: Olivier Fourdan <fourdan@xfce.org>
+Date:   Tue Jul 17 11:39:24 2018 +0200
+
+    compositor: Print the GL renderer used
+    
+    For debugging purpose.
+
+commit 62ba8614249c894ee37dc0377e8f3f6a51adcfd0
+Author: Olivier Fourdan <fourdan@xfce.org>
+Date:   Sun May 27 17:05:59 2018 +0200
+
+    compositor: Do not repaint if region is empty
+    
+    Just a small attempt at optimizing things a bit.
+    
+    Signed-off-by: Olivier Fourdan <fourdan@xfce.org>
+
+commit fe2a30e23610df6d2e679718e36739a54887a754
+Author: Hsiu-Ming Chang <cges30901@gmail.com>
+Date:   Mon Jul 16 18:36:16 2018 +0200
+
+    I18n: Update translation zh_TW (100%).
+    
+    169 translated messages.
+    
+    Transifex (https://www.transifex.com/xfce/public/).
+
+commit 7dcea0cfd6bff208eceff1b8db83de71a1d1d68c
+Author: Daniel Muñiz Fontoira <dani@damufo.com>
+Date:   Mon May 28 00:33:12 2018 +0200
+
+    I18n: Update translation gl (100%).
+    
+    169 translated messages.
+    
+    Transifex (https://www.transifex.com/xfce/public/).
+
+commit 344215884dff73674e95e60f00ef0eb66b20eb93
+Author: Michael Martins <michaelfm21@gmail.com>
+Date:   Thu May 17 06:33:23 2018 +0200
+
+    I18n: Update translation pt_BR (100%).
+    
+    169 translated messages.
+    
+    Transifex (https://www.transifex.com/xfce/public/).
+
+commit db683fac7122c22d46cef65ddd0b85344cf739c6
+Author: Robert Antoni Buj Gelonch <rbuj@fedoraproject.org>
+Date:   Mon May 14 12:33:55 2018 +0200
+
+    I18n: Update translation ca (100%).
+    
+    169 translated messages.
+    
+    Transifex (https://www.transifex.com/xfce/public/).
+
+commit 29c31df5a669a92f1128ab063c71cff0695318ef
+Author: Theppitak Karoonboonyanan <theppitak@gmail.com>
+Date:   Sun May 6 18:32:19 2018 +0200
+
+    I18n: Update translation th (100%).
+    
+    169 translated messages.
+    
+    Transifex (https://www.transifex.com/xfce/public/).
+
+commit c5acc93ace03c8268ed30760fac0d0173230263d
+Author: Robert Antoni Buj Gelonch <rbuj@fedoraproject.org>
+Date:   Sun May 6 00:33:20 2018 +0200
+
+    I18n: Update translation ca (100%).
+    
+    169 translated messages.
+    
+    Transifex (https://www.transifex.com/xfce/public/).
+
+commit cbdca4ecca1d3666b1b6e4588d0fe29e4b2d02eb
+Author: Balázs Meskó <meskobalazs@gmail.com>
+Date:   Sat Apr 28 18:33:35 2018 +0200
+
+    I18n: Update translation hu (100%).
+    
+    169 translated messages.
+    
+    Transifex (https://www.transifex.com/xfce/public/).
+
+commit 399411a5a2ffc4b3eedb45ec8ac65eceebb577ef
+Author: John Humphrys <john.humphrys@pm.me>
+Date:   Fri Apr 27 06:33:05 2018 +0200
+
+    I18n: Update translation en_AU (100%).
+    
+    169 translated messages.
+    
+    Transifex (https://www.transifex.com/xfce/public/).
+
+commit e4b8d96f1d1270ff2be3ba9c6ada10fb7c7cb4df
+Author: Olivier Fourdan <fourdan@xfce.org>
+Date:   Wed Apr 4 22:23:49 2018 +0200
+
+    compositor: avoid damage errors
+    
+    Bug: 14323
+    
+    On unmap/destroy, the damage may already be destroyed along with the
+    attached resource, make sure we catch those errors so it doesn't bother
+    gtk+.
+
+commit e63cdb19cfa98bac6e8001a22b0a69445abd9a6b
+Author: Olivier Fourdan <fourdan@xfce.org>
+Date:   Wed Apr 4 22:14:51 2018 +0200
+
+    Use convenient display functions
+
+commit 84926d2868b19c60831b319249226e1448ff0227
+Author: Olivier Fourdan <fourdan@xfce.org>
+Date:   Wed Apr 4 21:27:09 2018 +0200
+
+    display: Add convenient display functions
+    
+    This adds:
+      myDisplayErrorTrapPush()
+      myDisplayErrorTrapPop()
+      myDisplayErrorTrapPopIgnored()
+      myDisplayBeep()
+      myDisplayGetKeymap()
+    
+    Se we don't have to check for gtk+ version all over the place.
+
+commit a1cc12c183333f65f185b184edc06a6a24038879
+Author: Erlend Østlie <erlendandreas12368@gmail.com>
+Date:   Tue Apr 3 00:32:06 2018 +0200
+
+    I18n: Update translation nb (98%).
+    
+    167 translated messages, 2 untranslated messages.
+    
+    Transifex (https://www.transifex.com/xfce/public/).
+
+commit 5b834fa8f44422e6d41965e859b2e9cd4cd2863b
+Author: Olivier Fourdan <fourdan@xfce.org>
+Date:   Sat Mar 31 15:25:15 2018 +0200
+
+    build: Fix warnings and errors
+    
+    That would prevent building with --enable-debug=full
+
+commit a67f5d0ba37e3043a19f9dc1de0ef5adb96384a8
+Author: Olivier Fourdan <fourdan@xfce.org>
+Date:   Sat Mar 31 15:23:07 2018 +0200
+
+    trace: rework traces
+    
+    Make traces more consistent.
+
+commit ea1a7115c1e2634d77c5b647cd51b7b0b8b027cb
+Author: Olivier Fourdan <fourdan@xfce.org>
+Date:   Sat Mar 31 11:54:04 2018 +0200
+
+    Build: Fix warnings with newer gtk+
+
+commit 2fb59f21014b44dd36cce8740ad919f4cba608d3
+Author: Andre Miranda <andreldm@xfce.org>
+Date:   Tue Mar 6 18:47:22 2018 -0300
+
+    Fix memory leaks in tabwin
+    
+    Bug: 14240
+
+commit 4ec48e8d52ad5afefb20d00345967a1bcf27a34f
+Author: Adam Purkrt <adam@purkrt.net>
+Date:   Sun Jan 21 17:51:37 2018 +0100
+
+    Typo in clientMoveTile
+    
+    Bug: 14181
+    
+    The comparison is corrected, closing a one pixel gap between
+    TILE_LEFT and TILE_UP_LEFT and between TILE_RIGHT and TILE_UP_RIGHT.
+
+commit 140a5d750d2429186582f8c4d477ee72585dc480
+Author: Steve Harris <steve@cultureofweb.com>
+Date:   Thu Mar 29 00:32:25 2018 +0200
+
+    I18n: Add new translation en_CA (100%).
+    
+    169 translated messages.
+    
+    Transifex (https://www.transifex.com/xfce/public/).
+
+commit 371475cd636c7d69318389e1fc76d41ee8b794ae
+Author: Cheng-Chia Tseng <pswo10680@gmail.com>
+Date:   Thu Mar 29 00:32:24 2018 +0200
+
+    I18n: Update translation zh_TW (99%).
+    
+    168 translated messages, 1 untranslated message.
+    
+    Transifex (https://www.transifex.com/xfce/public/).
+
+commit 66fc46e3df68c183684740a5f216aad428b3bb0f
+Author: Zmicer Turok <zmicerturok@gmail.com>
+Date:   Fri Mar 23 18:33:35 2018 +0100
+
+    I18n: Update translation be (100%).
+    
+    169 translated messages.
+    
+    Transifex (https://www.transifex.com/xfce/public/).
+
+commit 962f0f4f7b10744323af4ec5272b86cc960bf189
+Author: Baurzhan Muftakhidinov <baurthefirst@gmail.com>
+Date:   Thu Mar 22 18:32:24 2018 +0100
+
+    I18n: Update translation kk (100%).
+    
+    169 translated messages.
+    
+    Transifex (https://www.transifex.com/xfce/public/).
+
+commit 166646ef7771b9fd3fc4ce0c17598bfa90119e10
+Author: José Vieira <jvieira33@sapo.pt>
+Date:   Mon Mar 19 18:33:12 2018 +0100
+
+    I18n: Update translation pt (100%).
+    
+    169 translated messages.
+    
+    Transifex (https://www.transifex.com/xfce/public/).
+
+commit 3a84961d3dd5ffdd59437519cfbe8f0e7f9c5b4a
+Author: Nobuhiro Iwamatsu <iwamatsu@nigauri.org>
+Date:   Mon Mar 19 00:32:28 2018 +0100
+
+    I18n: Update translation ja (100%).
+    
+    169 translated messages.
+    
+    Transifex (https://www.transifex.com/xfce/public/).
+
+commit 7b9352f4678d82f1a2d79e4f9780beb970ea0e67
+Author: Emanuele Petriglia <inbox@emanuelepetriglia.me>
+Date:   Sun Mar 18 18:34:17 2018 +0100
+
+    I18n: Update translation it (100%).
+    
+    169 translated messages.
+    
+    Transifex (https://www.transifex.com/xfce/public/).
+
+commit 4c6735edce7b93001d93fc8333fffd0d844a8c29
+Author: Charles Monzat <superboa@hotmail.fr>
+Date:   Sun Mar 18 18:34:17 2018 +0100
+
+    I18n: Update translation fr (100%).
+    
+    169 translated messages.
+    
+    Transifex (https://www.transifex.com/xfce/public/).
+
+commit 41e8ff25f416aa72b1ecf992a87a3826d55206c8
+Author: Anonymous <noreply@xfce.org>
+Date:   Thu Mar 8 18:34:17 2018 +0100
+
+    I18n: Update translation da (100%).
+    
+    169 translated messages.
+    
+    Transifex (https://www.transifex.com/xfce/public/).
+
+commit 3eb576b2bcc57a7f2e5217da38ae8116715d322c
+Author: Påvel Nicklasson <pavel2@frimix.se>
+Date:   Fri Mar 2 18:33:19 2018 +0100
+
+    I18n: Update translation sv (100%).
+    
+    169 translated messages.
+    
+    Transifex (https://www.transifex.com/xfce/public/).
+
+commit 014c663169d83f527e97a4fad6c7486765b26f6d
+Author: Zmicer Turok <zmicerturok@gmail.com>
+Date:   Thu Mar 1 00:33:37 2018 +0100
+
+    I18n: Update translation be (100%).
+    
+    169 translated messages.
+    
+    Transifex (https://www.transifex.com/xfce/public/).
+
+commit 721721231c7a05d3b90d2e677866e40d55c2d894
+Author: Jiri Grönroos <jiri.gronroos@iki.fi>
+Date:   Mon Feb 19 18:33:42 2018 +0100
+
+    I18n: Update translation fi (100%).
+    
+    169 translated messages.
+    
+    Transifex (https://www.transifex.com/xfce/public/).
+
+commit 0600f1d1d312e62aaca7165c80ce71d45242754d
+Author: Zmicer Turok <zmicerturok@gmail.com>
+Date:   Sun Feb 18 00:32:59 2018 +0100
+
+    I18n: Update translation be (100%).
+    
+    169 translated messages.
+    
+    Transifex (https://www.transifex.com/xfce/public/).
+
+commit b8a64d8561892e8bcb12bc0c476f25d9f3136aec
+Author: Πέτρος Σαμαράς <psamaras1@gmail.com>
+Date:   Fri Feb 16 06:32:50 2018 +0100
+
+    I18n: Update translation el (100%).
+    
+    169 translated messages.
+    
+    Transifex (https://www.transifex.com/xfce/public/).
+
+commit 23131f45cf93a4274add697d68a652d595ef7cc7
+Author: Vinzenz Vietzke <vinz@vinzv.de>
+Date:   Tue Feb 13 00:33:05 2018 +0100
+
+    I18n: Update translation de (100%).
+    
+    169 translated messages.
+    
+    Transifex (https://www.transifex.com/xfce/public/).
+
+commit 15a64b0f66856af40b324d9869fb2002abc40c42
+Author: Olivier Fourdan <fourdan@xfce.org>
+Date:   Sun Jan 21 17:35:16 2018 +0100
+
+    stacking: Raise on activate w/out click-to-focus
+    
+    Bug 14164
+    
+    Still need to raise the window on activate when using focus follow mode
+    otherwise.
+
+commit 315e1bea2f10263c9d3f3d64fb8233abc69b194d
+Author: Adam Purkrt <adam@purkrt.net>
+Date:   Sat Jan 20 07:49:27 2018 +0100
+
+    Keep grip in proportion
+    
+    Bug: 14174
+    
+    To keep the distance of the grip from the edges of the window
+    in proportion when unmaximizing/untiling while moving the window,
+    the grip position is recalculated using pxratio and pyratio.
+
+commit 10d59eabac41373ddd9018dd250a5855d94fd295
+Author: Olivier Fourdan <fourdan@xfce.org>
+Date:   Sun Jan 21 16:54:50 2018 +0100
+
+    pixmap: Avoid warning without icon
+
+commit a33fc7afbcfdddf20f29e60207c3b59ade9396d2
+Author: Olivier Fourdan <fourdan@xfce.org>
+Date:   Sun Jan 21 16:32:16 2018 +0100
+
+    stacking: Raise ancestor on activate if different from window
+    
+    Bug 14164
+    
+    This is a regression introduced by 3877bf45, where we would differ
+    raising the window until it's focused.
+    
+    When using click to focus, activating a transient window would raise
+    only that transient and not its ancestor, if any.
+    
+    Change the logic to raise the ancestor if it's different from the
+    requested window itself.
+
+commit 93baf72dac705e2086407fbf9393f8e8b0659e20
+Author: Baurzhan Muftakhidinov <baurthefirst@gmail.com>
+Date:   Sun Jan 21 12:34:42 2018 +0100
+
+    I18n: Update translation kk (100%).
+    
+    169 translated messages.
+    
+    Transifex (https://www.transifex.com/xfce/public/).
+
+commit d4e5a90b080f704e0a5ba55ba92fff7cec6224c8
+Author: Olivier Fourdan <fourdan@xfce.org>
+Date:   Fri Jan 19 19:20:54 2018 +0100
+
+    display: Fix warning in trace message
+    
+    Would break --enable-debug=full as this induces -Werror.
+
+commit 52631807475a580a3ca9d5cdba285f888f7714c7
+Author: Olivier Fourdan <fourdan@xfce.org>
+Date:   Fri Jan 19 19:14:51 2018 +0100
+
+    main: keep xfwm4_error_quark private
+    
+    No need to have that public, so we can please the compiler.
+
+commit 84b905b7854bc04b00b681588b8d9cbd7f29493e
+Author: Adam Purkrt <adam@purkrt.net>
+Date:   Thu Jan 18 19:52:15 2018 +0100
+
+    Fix to erratic unmaximization by dragging
+    
+    Bug: 11960
+    
+    This patch fixes the erratic behaviour when unmaximizing a window by
+    dragging it from the absolute top.
+    
+    clientToggleMaximized is now called with each motion event if
+    a window is maximized, hence it is always unmaximized before possibly
+    toggling maximization again in clientTile further down.
+
+commit 480517d49d3e4cf48357fbe47d193f62542ab94b
+Author: Olivier Fourdan <fourdan@xfce.org>
+Date:   Thu Jan 18 21:18:04 2018 +0100
+
+    screen: Use computed screen size instead of xlib
+    
+    When the xrandr layout is changed, we recompute the screen size on the
+    actual monitors size and layout.
+    
+    Use this computed value instead of the size reported by Xlib as it's not
+    yet updated by the time we reconfigure our display. This is particularly
+    bad when the compositor is enabled as the overlay window end up being of
+    the wrong size.
+
+commit aebbdd5bccc248aa093ac47b1d1c88f16da273a1
+Author: Yarema aka Knedlyk <yupadmin@gmail.com>
+Date:   Tue Jan 16 00:34:15 2018 +0100
+
+    I18n: Update translation uk (100%).
+    
+    169 translated messages.
+    
+    Transifex (https://www.transifex.com/xfce/public/).
+
+commit 17753656bf0b3a8bcc77872091fc4f429b8f0880
+Author: Xosé <xosecalvo@gmail.com>
+Date:   Sun Jan 14 00:34:29 2018 +0100
+
+    I18n: Update translation gl (98%).
+    
+    167 translated messages, 2 untranslated messages.
+    
+    Transifex (https://www.transifex.com/xfce/public/).
+
+commit 4d541f43762ec38b5e8c16fd6bbdcaa88d294bbe
+Author: 玉堂白鹤 <yjwork@qq.com>
+Date:   Fri Jan 5 06:33:01 2018 +0100
+
+    I18n: Update translation zh_CN (100%).
+    
+    169 translated messages.
+    
+    Transifex (https://www.transifex.com/xfce/public/).
+
+commit df351ebb0b15249d2b597435b3c7f2137c531eb8
+Author: Michal Várady <miko.vaji@gmail.com>
+Date:   Mon Jan 1 12:32:45 2018 +0100
+
+    I18n: Update translation cs (100%).
+    
+    169 translated messages.
+    
+    Transifex (https://www.transifex.com/xfce/public/).
+
+commit c8e65a36768fe744e5bb01ca638479e9a4c6e3ca
+Author: Robert Antoni Buj Gelonch <rbuj@fedoraproject.org>
+Date:   Mon Jan 1 00:35:08 2018 +0100
+
+    I18n: Update translation ca (100%).
+    
+    169 translated messages.
+    
+    Transifex (https://www.transifex.com/xfce/public/).
+
+commit 31723652816094ea1f97b3b6c3d5dc756a70ffd3
+Author: Robert Antoni Buj Gelonch <rbuj@fedoraproject.org>
+Date:   Sun Dec 31 12:34:15 2017 +0100
+
+    I18n: Update translation ca (100%).
+    
+    169 translated messages.
+    
+    Transifex (https://www.transifex.com/xfce/public/).
+
+commit a8db027a644fed9b42b361c1ab25f56c4f6f1d44
+Author: Robert Antoni Buj Gelonch <rbuj@fedoraproject.org>
+Date:   Sun Dec 31 06:34:25 2017 +0100
+
+    I18n: Update translation ca (100%).
+    
+    169 translated messages.
+    
+    Transifex (https://www.transifex.com/xfce/public/).
+
+commit e2a32c33685178dcd5db8bd89aaeaf66c111e3d0
+Author: Robert Antoni Buj Gelonch <rbuj@fedoraproject.org>
+Date:   Sat Dec 30 12:33:19 2017 +0100
+
+    I18n: Update translation ca (100%).
+    
+    169 translated messages.
+    
+    Transifex (https://www.transifex.com/xfce/public/).
+
+commit 180cc50d3111302539ab40b7e5c2b196ea029e00
+Author: Andi Chandler <andi@gowling.com>
+Date:   Fri Dec 29 06:32:54 2017 +0100
+
+    I18n: Update translation en_GB (100%).
+    
+    169 translated messages.
+    
+    Transifex (https://www.transifex.com/xfce/public/).
+
+commit dec64dd6775125603150a121802b82ca60931801
+Author: Pablo Lezaeta Reyes [pˈaβ̞lo lˌe̞θaˈeta rˈejɛ] <prflr88@gmail.com>
+Date:   Wed Dec 27 06:33:16 2017 +0100
+
+    I18n: Update translation es (100%).
+    
+    169 translated messages.
+    
+    Transifex (https://www.transifex.com/xfce/public/).
+
+commit 3ef33426cec9461f0bbe6721348be3068579fb74
+Author: abuyop <abuyop@gmail.com>
+Date:   Tue Dec 26 00:33:13 2017 +0100
+
+    I18n: Update translation ms (100%).
+    
+    169 translated messages.
+    
+    Transifex (https://www.transifex.com/xfce/public/).
+
+commit 6e3ee161c9461fb4fe559a4d8873e32c92363e5b
+Author: Andre Miranda <andre42m@gmail.com>
+Date:   Sun Dec 24 18:34:22 2017 +0100
+
+    I18n: Update translation pt_BR (100%).
+    
+    169 translated messages.
+    
+    Transifex (https://www.transifex.com/xfce/public/).
+
+commit b2ca8f72689b25df37a5066a352f528a2523d931
+Author: Elishai Eliyahu <e1907@mm.st>
+Date:   Sun Dec 24 00:34:06 2017 +0100
+
+    I18n: Update translation he (100%).
+    
+    169 translated messages.
+    
+    Transifex (https://www.transifex.com/xfce/public/).
+
+commit 5d793414f92854621402054d858170945072232d
+Author: Саша Петровић <salepetronije@gmail.com>
+Date:   Fri Dec 22 12:33:37 2017 +0100
+
+    I18n: Update translation sr (100%).
+    
+    169 translated messages.
+    
+    Transifex (https://www.transifex.com/xfce/public/).
+
+commit 9fc1499249eb6d4a2438b4d54c6079cb8390f92e
+Author: Charles Monzat <superboa@hotmail.fr>
+Date:   Fri Dec 22 12:33:37 2017 +0100
+
+    I18n: Update translation fr (100%).
+    
+    169 translated messages.
+    
+    Transifex (https://www.transifex.com/xfce/public/).
+
+commit 451c991b8be3ff8ef6d517ac1508dbe1287b930c
+Author: Necdet Yücel <necdetyucel@gmail.com>
+Date:   Fri Dec 22 00:34:18 2017 +0100
+
+    I18n: Update translation tr (100%).
+    
+    169 translated messages.
+    
+    Transifex (https://www.transifex.com/xfce/public/).
+
+commit 5bed69db02a0f412dd9a975a5c13e3e41d77412a
+Author: Igor <f2404@yandex.ru>
+Date:   Thu Dec 21 18:33:03 2017 +0100
+
+    I18n: Update translation ru (100%).
+    
+    169 translated messages.
+    
+    Transifex (https://www.transifex.com/xfce/public/).
+
+commit 85447f30044843c5623239686b10a1c5aeb4d42a
+Author: Anonymous <noreply@xfce.org>
+Date:   Thu Dec 21 00:32:34 2017 +0100
+
+    I18n: Update translation lt (100%).
+    
+    169 translated messages.
+    
+    Transifex (https://www.transifex.com/xfce/public/).
+
+commit 58dcef04b4737ec9871a312567923334d36b50fb
+Author: David Siroky <siroky@dasir.cz>
+Date:   Wed Dec 20 10:33:44 2017 +0100
+
+    Raise window while cycling
+    
+    Bug: 2701
+    
+    Optionally raise the window being considered while cycling.
+
+commit 845c8fb965f896b649e9c4c53c0edd4207756178
+Author: Robert Antoni Buj Gelonch <rbuj@fedoraproject.org>
+Date:   Mon Dec 18 12:35:04 2017 +0100
+
+    I18n: Update translation ca (100%).
+    
+    168 translated messages.
+    
+    Transifex (https://www.transifex.com/xfce/public/).
+
+commit 99f01449dd541d024cbdee60e0fc00715da5fa7b
+Author: 玉堂白鹤 <yjwork@qq.com>
+Date:   Mon Dec 18 06:33:02 2017 +0100
+
+    I18n: Update translation zh_CN (100%).
+    
+    168 translated messages.
+    
+    Transifex (https://www.transifex.com/xfce/public/).
+
+commit fa8b93af604ecbb5fc626ad62e2fd9795ad0625b
+Author: Andi Chandler <andi@gowling.com>
+Date:   Sun Dec 17 06:35:21 2017 +0100
+
+    I18n: Update translation en_GB (100%).
+    
+    168 translated messages.
+    
+    Transifex (https://www.transifex.com/xfce/public/).
+
+commit d2ca6354194669a8cb17f06dbf096e998075f641
+Author: Vinzenz Vietzke <vinz@vinzv.de>
+Date:   Sun Dec 17 00:34:24 2017 +0100
+
+    I18n: Update translation de (100%).
+    
+    168 translated messages.
+    
+    Transifex (https://www.transifex.com/xfce/public/).
+
+commit adb42111e27fb5d85f85a29b4b0cc70d13495018
+Author: Pablo Lezaeta Reyes [pˈaβ̞lo lˌe̞θaˈeta rˈejɛ] <prflr88@gmail.com>
+Date:   Thu Dec 14 00:33:38 2017 +0100
+
+    I18n: Update translation es (100%).
+    
+    168 translated messages.
+    
+    Transifex (https://www.transifex.com/xfce/public/).
+
+commit 2577f98584ac7341f614dfa78975cf8d7402fb62
+Author: abuyop <abuyop@gmail.com>
+Date:   Wed Dec 13 18:34:46 2017 +0100
+
+    I18n: Update translation ms (100%).
+    
+    168 translated messages.
+    
+    Transifex (https://www.transifex.com/xfce/public/).
+
+commit 4fecfe9e7905f8e8e7d60d5c88b2a82500299c4a
+Author: Vinzenz Vietzke <vinz@vinzv.de>
+Date:   Wed Dec 13 00:33:06 2017 +0100
+
+    I18n: Update translation de (100%).
+    
+    168 translated messages.
+    
+    Transifex (https://www.transifex.com/xfce/public/).
+
+commit 44633795db2c86f1f0d09ac8bae4d44788219c7a
+Author: Anonymous <noreply@xfce.org>
+Date:   Wed Dec 13 00:33:06 2017 +0100
+
+    I18n: Update translation da (100%).
+    
+    168 translated messages.
+    
+    Transifex (https://www.transifex.com/xfce/public/).
+
+commit f73400e45996ae452d8eb5a5bd157ff57a870ac9
+Author: Nuno Miguel <nunomgue@gmail.com>
+Date:   Tue Dec 12 00:34:10 2017 +0100
+
+    I18n: Update translation pt (100%).
+    
+    168 translated messages.
+    
+    Transifex (https://www.transifex.com/xfce/public/).
+
+commit 6924e1d7fc1468a9982db1d3b3f2d544a5c03d09
+Author: Igor <f2404@yandex.ru>
+Date:   Mon Dec 11 18:32:54 2017 +0100
+
+    I18n: Update translation ru (100%).
+    
+    168 translated messages.
+    
+    Transifex (https://www.transifex.com/xfce/public/).
+
+commit b6e36c9b8fee31379e6ae90d2e41de12d67a3b94
+Author: Pjotr <pjotrvertaalt@gmail.com>
+Date:   Sun Dec 10 18:32:43 2017 +0100
+
+    I18n: Update translation nl (100%).
+    
+    168 translated messages.
+    
+    Transifex (https://www.transifex.com/xfce/public/).
+
+commit 02a795fc9b4951bd71c57eb61730c2db5492fca9
+Author: Anonymous <noreply@xfce.org>
+Date:   Sat Dec 9 18:33:02 2017 +0100
+
+    I18n: Update translation lt (100%).
+    
+    168 translated messages.
+    
+    Transifex (https://www.transifex.com/xfce/public/).
+
+commit a798225d8dcce18a58adb2eff38ae18ec9949dbc
+Author: Yannick Le Guen <leguen.yannick@gmail.com>
+Date:   Sat Dec 9 18:33:02 2017 +0100
+
+    I18n: Update translation fr (100%).
+    
+    168 translated messages.
+    
+    Transifex (https://www.transifex.com/xfce/public/).
+
+commit 056d49ec9b16510bc28f14b2b7740ee1b82369bf
+Author: Dušan Kazik <prescott66@gmail.com>
+Date:   Sat Dec 9 12:33:02 2017 +0100
+
+    I18n: Update translation sk (100%).
+    
+    168 translated messages.
+    
+    Transifex (https://www.transifex.com/xfce/public/).
+
+commit 827731b84e4dd58373a8e5039015244e92266f79
+Author: Anonymous <noreply@xfce.org>
+Date:   Sat Dec 9 12:33:02 2017 +0100
+
+    I18n: Update translation pl (100%).
+    
+    168 translated messages.
+    
+    Transifex (https://www.transifex.com/xfce/public/).
+
+commit 40926469cfde278fecbf840e6cc364154f212cf7
+Author: 박정규(Jung-Kyu Park) <bagjunggyu@gmail.com>
+Date:   Sat Dec 9 12:33:02 2017 +0100
+
+    I18n: Update translation ko (100%).
+    
+    168 translated messages.
+    
+    Transifex (https://www.transifex.com/xfce/public/).
+
+commit 5d117ec3f00ca512153b96a074af99abace78433
+Author: Edin Veskovic <edin.lockedin@gmail.com>
+Date:   Sat Dec 9 12:33:02 2017 +0100
+
+    I18n: Update translation hr (100%).
+    
+    168 translated messages.
+    
+    Transifex (https://www.transifex.com/xfce/public/).
+
+commit 143a871d109acf0363cd936d41913ff8dff6337e
+Author: Elishai Eliyahu <e1907@mm.st>
+Date:   Sat Dec 9 12:33:02 2017 +0100
+
+    I18n: Update translation he (100%).
+    
+    168 translated messages.
+    
+    Transifex (https://www.transifex.com/xfce/public/).
+
+commit 20d4cfe68e3bf11771549c838b4d8f92eb7aeebd
+Author: Michal Várady <miko.vaji@gmail.com>
+Date:   Sat Dec 9 12:33:02 2017 +0100
+
+    I18n: Update translation cs (100%).
+    
+    168 translated messages.
+    
+    Transifex (https://www.transifex.com/xfce/public/).
+
+commit 8ed48481b3c91891527dd3d38ac73ec10407a7e8
+Author: Robert Antoni Buj Gelonch <rbuj@fedoraproject.org>
+Date:   Sat Dec 9 12:33:02 2017 +0100
+
+    I18n: Update translation ca (100%).
+    
+    168 translated messages.
+    
+    Transifex (https://www.transifex.com/xfce/public/).
+
+commit f47d79f0231ca2219ed047006b8ff9815807d078
+Author: Kiril Kirilov <cybercop_montana@abv.bg>
+Date:   Sat Dec 9 12:33:02 2017 +0100
+
+    I18n: Update translation bg (100%).
+    
+    168 translated messages.
+    
+    Transifex (https://www.transifex.com/xfce/public/).
+
+commit 87cbe0e3d01d467c14aa2bb4d3656bf6b39a4247
+Author: Olivier Fourdan <fourdan@xfce.org>
+Date:   Fri Dec 8 20:17:25 2017 +0100
+
+    client: Make sure to redraw when removing maximized
+    
+    Bug: 13954
+    
+    When a client issues a ConfigureRequest() on a toplevel window, that
+    window may transition from maximized to un-maximized state.
+    
+    Make sure we repaint and relocate the client window within the frame.
+    
+    Signed-off-by: Olivier Fourdan <fourdan@xfce.org>
+
+commit a7db4b7d82ce46d3d5e55ad3e86b48e42ef6c809
+Author: Olivier Fourdan <fourdan@xfce.org>
+Date:   Fri Dec 8 19:59:14 2017 +0100
+
+    compositor: fix clipping region with zooming
+    
+    When using xpresent as vblank method, the clipping region would not
+    match the zoom level causing artifacts.
+    
+    Signed-off-by: Olivier Fourdan <fourdan@xfce.org>
+
+commit 7d6cddd70eb0df96a86a8f2da288658c21e396a8
+Author: Olivier Fourdan <fourdan@xfce.org>
+Date:   Fri Dec 8 19:58:25 2017 +0100
+
+    compositor: add command line option for vblank
+    
+    vblank method can be selected using a command line option.
+    
+    Signed-off-by: Olivier Fourdan <fourdan@xfce.org>
+
+commit 6a44ecc303f3cdb6ba33c0f9b75710c4c0983760
+Author: Olivier Fourdan <fourdan@xfce.org>
+Date:   Wed Dec 6 09:53:25 2017 +0100
+
+    main: Only allow for the x11 gdk backend
+    
+    When running xfwm4 from a nested X11 server (Xnest, Xephyr) from within
+    a Wayland session, GDK will selects in priority the Wayland backend,
+    which will lead to a crash because xfwm4 is an X11 window manager and
+    not a Wayland client.
+    
+    Signed-off-by: Olivier Fourdan <fourdan@xfce.org>
+
+commit 54db88acb7e1988d5c39722d639a0347c99fd7b0
+Author: Olivier Fourdan <fourdan@xfce.org>
+Date:   Wed Dec 6 09:43:50 2017 +0100
+
+    Fix maximized size increment regression
+    
+    Bug: 13954
+    
+    Commit aee8b25a:
+    
+        Do not prevent ALT+Mouse resizing for borderless maximized windows.
+    
+    Introduced a regression with windows using size increment (like most
+    terminal emulators).
+    
+    Fix the size increment issue while preserving the possibility to resize
+    maximized window.
+    
+    Signed-off-by: Olivier Fourdan <fourdan@xfce.org>
+
+commit b6fa004ea1ad4d7db84730ae5f773cbc4b762eeb
+Author: Andrey Alekseenkov <zyx1984@gmail.com>
+Date:   Tue Dec 5 10:55:30 2017 +0100
+
+    Fix logic error in bottom struts validation
+    
+    Bug: 13964
+
+commit 5ee90cf17c156fd65a79801ceecafb2b2282dea1
+Author: Olivier Fourdan <fourdan@xfce.org>
+Date:   Tue Dec 5 10:53:11 2017 +0100
+
+    compositor: check XPresent before GLX
+    
+    Bug: 13970
+    
+    Not that it matters much in this case though.
+    
+    Signed-off-by: Olivier Fourdan <fourdan@xfce.org>
+
+commit 9c888ac750265b88a865cdbd01edf50395c82c54
+Author: P. Pronk <xfce@pronk.nl>
+Date:   Tue Jan 10 12:45:53 2017 +0100
+
+    client: Maximize on expected output
+    
+    Bug: 13284
+    
+    When dragging a window from a large monitor to the top of a smaller monitor to
+    maximize the window, it is possible that the window gets maximised on a
+    different monitor then the monitor your mouse is.
+    
+    This happens because clientToggleMaximized uses the center point of the window
+    to calculate on which monitor the window should be maximised.
+    
+    To fix this behaviour this commits adds a clientToggleMaximizedAtPoint method
+    so we can tell on which monitor the window should be maximised.
+
+commit ef33ff7b2666ffc320700592fc7d4a300d5a8163
+Author: Viktor Odintsev <ninetls@xfce.org>
+Date:   Mon Nov 27 16:42:18 2017 +0300
+
+    Replace XEvent with XfwmEvent + add xfwm_device_* grabs usage
+
+commit 6013f1ee9b3831991db6a0fb896f20537532b6ce
+Author: Viktor Odintsev <ninetls@xfce.org>
+Date:   Mon Nov 27 16:30:50 2017 +0300
+
+    device: Implement XI2 event handling
+
+commit 68b6854d5326149bd43ccf66ce7aaa6cde7901a0
+Author: Viktor Odintsev <ninetls@xfce.org>
+Date:   Wed Nov 22 07:20:46 2017 +0300
+
+    Fix some build warnings
+
+commit b52c2f5b740434803342c471d4dcb5dd62eb99a1
+Author: Viktor Odintsev <ninetls@xfce.org>
+Date:   Sun Nov 12 14:52:46 2017 +0300
+
+    main: add support for multiple screens with GDK 3
+
+commit fc93e65827c70db817953a371d38a548b4806a4a
+Author: Viktor Odintsev <ninetls@xfce.org>
+Date:   Sat Aug 19 00:49:28 2017 +0300
+
+    Add xfconf 4.13 support
+
+commit 01e33319216f5a0aad00ba0bce3e7560e2dabda7
+Author: Viktor Odintsev <ninetls@xfce.org>
+Date:   Fri Aug 4 03:01:17 2017 +0300
+
+    tabwin: fix initial sizing
+
+commit e0ce131a862f149ea31b3a607ac1ea9907312fa4
+Author: Viktor Odintsev <ninetls@xfce.org>
+Date:   Tue Aug 1 21:22:56 2017 +0300
+
+    client: remove X error traps
+    
+    Xfwm error handler will cover all errors itself, there is no
+    necessity to use error traps for client.
+    
+    GDK X error traps were changed in GDK 3 so using these traps
+    caused unwanted SIGTRAPs within GDK X error handler.
+
+commit 574ea24bceddde438c1d30aae5abe0b1e314e82a
+Author: Viktor Odintsev <zakhams@gmail.com>
+Date:   Fri Jul 7 06:03:48 2017 +0300
+
+    menu: remove deprecations
+
+commit 9cccb274b729f3f5cea5ae77df2553df79c12251
+Author: Viktor Odintsev <zakhams@gmail.com>
+Date:   Wed Jul 5 05:18:09 2017 +0300
+
+    Fix compilation with --disable-compositor
+
+commit c8d622b4274e154ab503f7f06bf49d7fa022ed0f
+Author: Viktor Odintsev <zakhams@gmail.com>
+Date:   Tue Jul 4 02:08:28 2017 +0300
+
+    events: replace client_event with event filter
+
+commit c2b0c814d5f08ce8c0895f3a4af6696655a90dd6
+Author: Viktor Odintsev <zakhams@gmail.com>
+Date:   Tue Jul 4 02:05:53 2017 +0300
+
+    compositor: fix possible infinite loop
+
+commit 09caed9efba94d1eeb898350b6ccca9e0860f38a
+Author: Viktor Odintsev <zakhams@gmail.com>
+Date:   Tue Jul 4 02:03:46 2017 +0300
+
+    Fix remaining deprecations
+
+commit af1d55ebeab6bbead9c76d40b04679c9e966855a
+Author: Viktor Odintsev <zakhams@gmail.com>
+Date:   Tue Jul 4 01:20:01 2017 +0300
+
+    poswin: remove deprecations
+
+commit 2c6edfb5de6f53ac08cf86e71ca7c1028e52760f
+Author: Viktor Odintsev <zakhams@gmail.com>
+Date:   Mon Jul 3 22:25:19 2017 +0300
+
+    tabwin: complete GTK3 port, add CSS support
+
+commit c1b720f018f8942a361cf9ad68bf308161effa8d
+Author: Viktor Odintsev <zakhams@gmail.com>
+Date:   Mon Jul 3 15:25:22 2017 +0300
+
+    Implement cairo drawing
+
+commit 91a9436fe11cdc2052a5c796d289351ae470082b
+Author: Viktor Odintsev <zakhams@gmail.com>
+Date:   Mon Jul 3 07:10:58 2017 +0300
+
+    Implement GTK2-like style calculator
+
+commit b4e3a24409bad27683c563c6b3fc188e2d43d9d0
+Author: Viktor Odintsev <zakhams@gmail.com>
+Date:   Mon Jul 3 06:58:04 2017 +0300
+
+    Remove black_gc and white_gc
+
+commit c1a940e35bf420f184dec762692bbe4d26065f36
+Author: Viktor Odintsev <zakhams@gmail.com>
+Date:   Mon Jul 3 00:39:42 2017 +0300
+
+    icons: use cairo-xlib-xrender to draw window's preview
+
+commit c225a438c82f97d8992c21d3260da6a9274c65a6
+Author: Viktor Odintsev <zakhams@gmail.com>
+Date:   Sun Jul 2 21:26:41 2017 +0300
+
+    Remove usage of deprecated macroses and private fields
+
+commit 5ca6f2e7bf8ef7b5214cb07d885884d0cb673993
+Author: Viktor Odintsev <zakhams@gmail.com>
+Date:   Sun Jul 2 20:06:27 2017 +0300
+
+    icons: replace gdk_pixbuf_get_from_drawable with gdk_pixbuf_get_from_surface
+
+commit ac2d6a325762959c0f640224ac0c0c07eb812c0c
+Author: Viktor Odintsev <zakhams@gmail.com>
+Date:   Sun Jul 2 20:04:24 2017 +0300
+
+    Replace gdk_error_trap_pop with gdk_error_trap_pop_ignored
+
+commit db7e36617bca979517a6cc6bc3d45f9e85982e56
+Author: Viktor Odintsev <zakhams@gmail.com>
+Date:   Sun Jul 2 18:32:42 2017 +0300
+
+    Remove deprecated gdk_screen_make_display_name
+
+commit 050a52ed2d44b1b5c16af4b85c518c16dd3c51d9
+Author: Viktor Odintsev <zakhams@gmail.com>
+Date:   Sun Jul 2 17:03:27 2017 +0300
+
+    Handle GDK display/screen/monitor deprecations
+
+commit 5b10f726c28c68d0ebc972754b08f5ea199d36b1
+Author: Viktor Odintsev <zakhams@gmail.com>
+Date:   Sun Jul 2 16:50:08 2017 +0300
+
+    Load default icon from icon theme
+
+commit 9d5ac6a4f964ce1b4a12b402486f81c77cd3c5e1
+Author: Viktor Odintsev <zakhams@gmail.com>
+Date:   Sun Jul 2 16:46:26 2017 +0300
+
+    Introduce xfwm-common static library
+
+commit efff6a64b3650d93501649edf3fbedea0f8f6f2f
+Author: Viktor Odintsev <zakhams@gmail.com>
+Date:   Thu Jun 29 18:28:20 2017 +0300
+
+    Handle gtk_button_set_alignment deprecation
+
+commit a0905eed964cf26a4c7872d472807f3c6ac2e795
+Author: Viktor Odintsev <zakhams@gmail.com>
+Date:   Thu Jun 29 16:43:25 2017 +0300
+
+    Handle gtk_screen_width/height deprecation
+
+commit b351f17b981c26f537d49a2bc7b3a6f7fc7e3f9c
+Author: Viktor Odintsev <zakhams@gmail.com>
+Date:   Thu Jun 29 16:23:22 2017 +0300
+
+    Replace inline pixbuf with gresource
+    
+    monitor-icon.svg was updated to look more modern. PNG file was
+    removed because pixbuf can be generated from SVG file directly.
+
+commit 479857e578e4cb2882534ec4ee633ea074e8afee
+Author: Viktor Odintsev <zakhams@gmail.com>
+Date:   Thu Jun 29 02:48:57 2017 +0300
+
+    Implement a new DND separator
+    
+    Old separator was implemented as clipped GdkWindow.
+    New separator is implemented using "draw" signal.
+
+commit 473ef8458b4e31711cbf2f7675d6bf0bbba52df5
+Author: Viktor Odintsev <zakhams@gmail.com>
+Date:   Wed Jun 28 22:57:26 2017 +0300
+
+    Implement RangeDebouncer
+    
+    This object allows to easily listen GtkRange value when drag
+    was finished. This was allowed in GTK2 with "update-policy" attribute
+    set to "discontinuous" which was removed in GTK3.
+
+commit 4c101f9b807fbd5e1067ca7254740a4ef1744e68
+Author: Viktor Odintsev <zakhams@gmail.com>
+Date:   Wed Jun 28 22:55:55 2017 +0300
+
+    Port most of GUI stuff to GTK3
+
+commit 047fbb30681f3679b5e92ebd44fef204386456c9
+Author: Viktor Odintsev <zakhams@gmail.com>
+Date:   Wed Jun 28 22:48:14 2017 +0300
+
+    Prepare to GTK3
+
+commit 89c29f54d2967a1a174db30de877faa1e02b62d5
+Author: 박정규(Jung-Kyu Park) <bagjunggyu@gmail.com>
+Date:   Tue Nov 14 18:40:38 2017 +0100
+
+    I18n: Update translation ko (100%).
+    
+    172 translated messages.
+    
+    Transifex (https://www.transifex.com/xfce/public/).
+
+commit 64097cd8d38f675baf0d64818d50beefdb74d3fe
+Author: Balázs Meskó <meskobalazs@gmail.com>
+Date:   Mon Oct 30 00:34:25 2017 +0100
+
+    I18n: Update translation hu (100%).
+    
+    172 translated messages.
+    
+    Transifex (https://www.transifex.com/xfce/public/).
+
+commit 804538164e8c0d8d4299d1b93671bea33ff06ca0
+Author: Tobias Bannert <tobannert@gmail.com>
+Date:   Thu Oct 5 18:33:31 2017 +0200
+
+    I18n: Update translation de (100%).
+    
+    172 translated messages.
+    
+    Transifex (https://www.transifex.com/xfce/public/).
+
+commit 7015debbcef47df23787ca42fa2be693e28d5bab
+Author: Anonymous <noreply@xfce.org>
+Date:   Sun Oct 1 00:34:25 2017 +0200
+
+    I18n: Update translation da (100%).
+    
+    172 translated messages.
+    
+    Transifex (https://www.transifex.com/xfce/public/).
+
+commit e50ce8dcbf5457a63e635e82f22e1cc1463978ac
+Author: Anonymous <noreply@xfce.org>
+Date:   Sat Sep 30 18:37:08 2017 +0200
+
+    I18n: Update translation da (100%).
+    
+    172 translated messages.
+    
+    Transifex (https://www.transifex.com/xfce/public/).
+
+commit f24dd41f4744189b5060860e1c2e50f93f9139df
+Author: Anonymous <noreply@xfce.org>
+Date:   Sat Sep 30 00:35:29 2017 +0200
+
+    I18n: Update translation da (100%).
+    
+    172 translated messages.
+    
+    Transifex (https://www.transifex.com/xfce/public/).
+
+commit 17b9cfa2b3ccfc7376589d0ed2b1f4b9f0ac4ad1
+Author: Anonymous <noreply@xfce.org>
+Date:   Fri Sep 29 18:34:16 2017 +0200
+
+    I18n: Update translation da (100%).
+    
+    172 translated messages.
+    
+    Transifex (https://www.transifex.com/xfce/public/).
+
+commit d9b23d8cb08144e84129f892013f41171d076e4d
+Author: Xfce Bot <transifex@xfce.org>
+Date:   Sun Sep 24 00:51:45 2017 +0200
+
+    I18n: Update translation ug (88%).
+    
+    152 translated messages, 20 untranslated messages.
+    
+    Transifex (https://www.transifex.com/xfce/public/).
+
+commit fd2430d385d199a9d749c996fc0c818194a15018
+Author: Xfce Bot <transifex@xfce.org>
+Date:   Sun Sep 24 00:51:45 2017 +0200
+
+    I18n: Update translation tr (100%).
+    
+    172 translated messages.
+    
+    Transifex (https://www.transifex.com/xfce/public/).
+
+commit 5e6d3e6d0735aa26041bdbb057c3867034ed6e72
+Author: Xfce Bot <transifex@xfce.org>
+Date:   Sun Sep 24 00:51:45 2017 +0200
+
+    I18n: Update translation th (100%).
+    
+    172 translated messages.
+    
+    Transifex (https://www.transifex.com/xfce/public/).
+
+commit 74733601731d116af51db9a72f378f82cb1107e2
+Author: Xfce Bot <transifex@xfce.org>
+Date:   Sun Sep 24 00:51:44 2017 +0200
+
+    I18n: Update translation ru (100%).
+    
+    172 translated messages.
+    
+    Transifex (https://www.transifex.com/xfce/public/).
+
+commit 957aa33609649d45122223e47755b98652dee302
+Author: José Vieira <jvieira33@sapo.pt>
+Date:   Sun Sep 24 00:51:44 2017 +0200
+
+    I18n: Update translation pt (100%).
+    
+    172 translated messages.
+    
+    Transifex (https://www.transifex.com/xfce/public/).
+
+commit 000d7d6cc30e21ac7ca646a851364709c46dde28
+Author: Michael Martins <michaelfm21@gmail.com>
+Date:   Sun Sep 24 00:51:44 2017 +0200
+
+    I18n: Update translation pt_BR (100%).
+    
+    172 translated messages.
+    
+    Transifex (https://www.transifex.com/xfce/public/).
+
+commit 6a119e5d37463af5242a003d758591c29f4e32e0
+Author: Xfce Bot <transifex@xfce.org>
+Date:   Sun Sep 24 00:51:44 2017 +0200
+
+    I18n: Update translation pl (100%).
+    
+    172 translated messages.
+    
+    Transifex (https://www.transifex.com/xfce/public/).
+
+commit 918f1056b9016498535a1db3c455d67787690728
+Author: Xfce Bot <transifex@xfce.org>
+Date:   Sun Sep 24 00:51:44 2017 +0200
+
+    I18n: Update translation oc (100%).
+    
+    172 translated messages.
+    
+    Transifex (https://www.transifex.com/xfce/public/).
+
+commit 733173ec6eb0a2b11952cd7340fd2e8017fdcdc1
+Author: Xfce Bot <transifex@xfce.org>
+Date:   Sun Sep 24 00:51:44 2017 +0200
+
+    I18n: Update translation nl (100%).
+    
+    172 translated messages.
+    
+    Transifex (https://www.transifex.com/xfce/public/).
+
+commit 7638589bba72cc516b88691e934a5639afb39d12
+Author: Seong-ho Cho <darkcircle.0426@gmail.com>
+Date:   Sun Sep 24 00:51:44 2017 +0200
+
+    I18n: Update translation ko (100%).
+    
+    172 translated messages.
+    
+    Transifex (https://www.transifex.com/xfce/public/).
+
+commit ce0204c144b59d8c6ff0e9a7b7d9362e3acaf4d1
+Author: Xfce Bot <transifex@xfce.org>
+Date:   Sun Sep 24 00:51:44 2017 +0200
+
+    I18n: Update translation ja (100%).
+    
+    172 translated messages.
+    
+    Transifex (https://www.transifex.com/xfce/public/).
+
+commit 54dcd8708aade920b88e8247443d3a9ba5ce613a
+Author: Xfce Bot <transifex@xfce.org>
+Date:   Sun Sep 24 00:51:44 2017 +0200
+
+    I18n: Update translation it (100%).
+    
+    172 translated messages.
+    
+    Transifex (https://www.transifex.com/xfce/public/).
+
+commit c62ddf731fe41fe745a9359492cd61b50cf4ed4f
+Author: Xfce Bot <transifex@xfce.org>
+Date:   Sun Sep 24 00:51:44 2017 +0200
+
+    I18n: Update translation id (100%).
+    
+    172 translated messages.
+    
+    Transifex (https://www.transifex.com/xfce/public/).
+
+commit 515e9396e540e577467073dfaac53640af9350b7
+Author: Xfce Bot <transifex@xfce.org>
+Date:   Sun Sep 24 00:51:44 2017 +0200
+
+    I18n: Update translation hr (100%).
+    
+    172 translated messages.
+    
+    Transifex (https://www.transifex.com/xfce/public/).
+
+commit db3bd069a802a9409cd62db2270f18ef2e53e90e
+Author: Xfce Bot <transifex@xfce.org>
+Date:   Sun Sep 24 00:51:43 2017 +0200
+
+    I18n: Update translation he (100%).
+    
+    172 translated messages.
+    
+    Transifex (https://www.transifex.com/xfce/public/).
+
+commit a893b948bdcb89b396878ae18e53a946ff0d485b
+Author: Yannick Le Guen <leguen.yannick@gmail.com>
+Date:   Sun Sep 24 00:51:43 2017 +0200
+
+    I18n: Update translation fr (100%).
+    
+    172 translated messages.
+    
+    Transifex (https://www.transifex.com/xfce/public/).
+
+commit 5e3f76d2174c4b812afa22ed2d680430e2c83894
+Author: Xfce Bot <transifex@xfce.org>
+Date:   Sun Sep 24 00:51:43 2017 +0200
+
+    I18n: Update translation es (100%).
+    
+    172 translated messages.
+    
+    Transifex (https://www.transifex.com/xfce/public/).
+
+commit 2a427389af444e4b7abf8c10f69dad17c3c02377
+Author: Xfce Bot <transifex@xfce.org>
+Date:   Sun Sep 24 00:51:43 2017 +0200
+
+    I18n: Update translation en_AU (100%).
+    
+    172 translated messages.
+    
+    Transifex (https://www.transifex.com/xfce/public/).
+
+commit b71dbd58373987544a942bf45a76622653d8d3cb
+Author: Xfce Bot <transifex@xfce.org>
+Date:   Sun Sep 24 00:51:43 2017 +0200
+
+    I18n: Update translation ca (100%).
+    
+    172 translated messages.
+    
+    Transifex (https://www.transifex.com/xfce/public/).
+
+commit 02c303f411b2cba62556047840d87456f0c44e20
+Author: Xfce Bot <transifex@xfce.org>
+Date:   Sun Sep 24 00:51:43 2017 +0200
+
+    I18n: Update translation ast (93%).
+    
+    160 translated messages, 12 untranslated messages.
+    
+    Transifex (https://www.transifex.com/xfce/public/).
+
+commit 4bf85443bce5445feeebb00ddc81d656eb2a3d57
+Author: Anonymous <noreply@xfce.org>
+Date:   Sun Sep 24 00:51:42 2017 +0200
+
+    I18n: Update translation ar (100%).
+    
+    172 translated messages.
+    
+    Transifex (https://www.transifex.com/xfce/public/).
+
+commit 00149b4cdbe05543acc4f9d7ba760dbcb5c5543e
+Author: Xfce Bot <transifex@xfce.org>
+Date:   Wed Sep 20 01:04:48 2017 +0200
+
+    I18n: Update translation zh_TW (100%).
+    
+    172 translated messages.
+    
+    Transifex (https://www.transifex.com/xfce/public/).
+
+commit 77bda9b55bb4521990494d01910b35baa6ebccc8
+Author: Xfce Bot <transifex@xfce.org>
+Date:   Wed Sep 20 01:04:48 2017 +0200
+
+    I18n: Update translation zh_HK (94%).
+    
+    162 translated messages, 10 untranslated messages.
+    
+    Transifex (https://www.transifex.com/xfce/public/).
+
+commit 34cb3b95017ad8310fd4c2339a38d1e24a28aa0c
+Author: Xfce Bot <transifex@xfce.org>
+Date:   Wed Sep 20 01:04:48 2017 +0200
+
+    I18n: Update translation zh_CN (100%).
+    
+    172 translated messages.
+    
+    Transifex (https://www.transifex.com/xfce/public/).
+
+commit a6a269175e3ccf05db84a2cb44238dde506f6def
+Author: Xfce Bot <transifex@xfce.org>
+Date:   Wed Sep 20 01:04:48 2017 +0200
+
+    I18n: Update translation ur (71%).
+    
+    123 translated messages, 49 untranslated messages.
+    
+    Transifex (https://www.transifex.com/xfce/public/).
+
+commit 4bc0757d66d9c87af4132b254f76ba524d9b54aa
+Author: Xfce Bot <transifex@xfce.org>
+Date:   Wed Sep 20 01:04:48 2017 +0200
+
+    I18n: Update translation ur_PK (71%).
+    
+    123 translated messages, 49 untranslated messages.
+    
+    Transifex (https://www.transifex.com/xfce/public/).
+
+commit 28b8f89d6c4b70990e99d843f1fcfd071622aa11
+Author: Xfce Bot <transifex@xfce.org>
+Date:   Wed Sep 20 01:04:48 2017 +0200
+
+    I18n: Update translation uk (100%).
+    
+    172 translated messages.
+    
+    Transifex (https://www.transifex.com/xfce/public/).
+
+commit af37777bd0d9ed9e4b7034d35637e77e6e930ebe
+Author: Xfce Bot <transifex@xfce.org>
+Date:   Wed Sep 20 01:04:48 2017 +0200
+
+    I18n: Update translation ug (88%).
+    
+    152 translated messages, 20 untranslated messages.
+    
+    Transifex (https://www.transifex.com/xfce/public/).
+
+commit d9f53d98a1b48c581a225e0ac59c11fd9ab76a10
+Author: Xfce Bot <transifex@xfce.org>
+Date:   Wed Sep 20 01:04:47 2017 +0200
+
+    I18n: Update translation tr (100%).
+    
+    172 translated messages.
+    
+    Transifex (https://www.transifex.com/xfce/public/).
+
+commit 8cf281f0e7a296f8123bf770d176a24a05fc77e7
+Author: Xfce Bot <transifex@xfce.org>
+Date:   Wed Sep 20 01:04:47 2017 +0200
+
+    I18n: Update translation th (100%).
+    
+    172 translated messages.
+    
+    Transifex (https://www.transifex.com/xfce/public/).
+
+commit 7209d83f77869723af1812c4f9d2187f625dc239
+Author: Xfce Bot <transifex@xfce.org>
+Date:   Wed Sep 20 01:04:47 2017 +0200
+
+    I18n: Update translation sv (100%).
+    
+    172 translated messages.
+    
+    Transifex (https://www.transifex.com/xfce/public/).
+
+commit 9a9bb71d7108ee998a325822e2bd19639d69eb08
+Author: Xfce Bot <transifex@xfce.org>
+Date:   Wed Sep 20 01:04:47 2017 +0200
+
+    I18n: Update translation sr (100%).
+    
+    172 translated messages.
+    
+    Transifex (https://www.transifex.com/xfce/public/).
+
+commit d610013130574ed76b084b89f39137621d016e47
+Author: Xfce Bot <transifex@xfce.org>
+Date:   Wed Sep 20 01:04:47 2017 +0200
+
+    I18n: Update translation sq (69%).
+    
+    119 translated messages, 53 untranslated messages.
+    
+    Transifex (https://www.transifex.com/xfce/public/).
+
+commit f7c7ebcdab6c68731f2f9bee4ace34b8725d327a
+Author: Xfce Bot <transifex@xfce.org>
+Date:   Wed Sep 20 01:04:47 2017 +0200
+
+    I18n: Update translation sl (99%).
+    
+    171 translated messages, 1 untranslated message.
+    
+    Transifex (https://www.transifex.com/xfce/public/).
+
+commit fb61371037bc5b530eb8da8a6bd90d787972ec0e
+Author: Xfce Bot <transifex@xfce.org>
+Date:   Wed Sep 20 01:04:47 2017 +0200
+
+    I18n: Update translation sk (100%).
+    
+    172 translated messages.
+    
+    Transifex (https://www.transifex.com/xfce/public/).
+
+commit 1251878dd22f91e60ef6b2b56438aa37b053e1d0
+Author: Xfce Bot <transifex@xfce.org>
+Date:   Wed Sep 20 01:04:46 2017 +0200
+
+    I18n: Update translation ru (100%).
+    
+    172 translated messages.
+    
+    Transifex (https://www.transifex.com/xfce/public/).
+
+commit 16265029e23aeedf3d4f2a337ebc60572ac133bf
+Author: Xfce Bot <transifex@xfce.org>
+Date:   Wed Sep 20 01:04:46 2017 +0200
+
+    I18n: Update translation ro (95%).
+    
+    165 translated messages, 7 untranslated messages.
+    
+    Transifex (https://www.transifex.com/xfce/public/).
+
+commit 2e8e1f1a7899e25979313c7097cb15e77e233f71
+Author: José Vieira <jvieira33@sapo.pt>
+Date:   Wed Sep 20 01:04:45 2017 +0200
+
+    I18n: Update translation pt (100%).
+    
+    172 translated messages.
+    
+    Transifex (https://www.transifex.com/xfce/public/).
+
+commit 791f5327c8910b0985659aad11fb5561a99298ad
+Author: Michael Martins <michaelfm21@gmail.com>
+Date:   Wed Sep 20 01:04:45 2017 +0200
+
+    I18n: Update translation pt_BR (100%).
+    
+    172 translated messages.
+    
+    Transifex (https://www.transifex.com/xfce/public/).
+
+commit 6a7cebffd44f26b25aabde19aaf6ddc878921440
+Author: Xfce Bot <transifex@xfce.org>
+Date:   Wed Sep 20 01:04:45 2017 +0200
+
+    I18n: Update translation pl (100%).
+    
+    172 translated messages.
+    
+    Transifex (https://www.transifex.com/xfce/public/).
+
+commit 39928ba0fdc859fc53480bfa4a47ed638e92f346
+Author: Xfce Bot <transifex@xfce.org>
+Date:   Wed Sep 20 01:04:45 2017 +0200
+
+    I18n: Update translation oc (100%).
+    
+    172 translated messages.
+    
+    Transifex (https://www.transifex.com/xfce/public/).
+
+commit 4d1bebfe11567daf094ad65af8ea405a21f3d70f
+Author: Xfce Bot <transifex@xfce.org>
+Date:   Wed Sep 20 01:04:44 2017 +0200
+
+    I18n: Update translation nn (100%).
+    
+    172 translated messages.
+    
+    Transifex (https://www.transifex.com/xfce/public/).
+
+commit 5ce163e489ba7cf4aa2d3f40982c86bd1e833b4a
+Author: Xfce Bot <transifex@xfce.org>
+Date:   Wed Sep 20 01:04:44 2017 +0200
+
+    I18n: Update translation nl (100%).
+    
+    172 translated messages.
+    
+    Transifex (https://www.transifex.com/xfce/public/).
+
+commit f58078cd8652235e772cd6ab333e7c2480bee44e
+Author: Xfce Bot <transifex@xfce.org>
+Date:   Wed Sep 20 01:04:44 2017 +0200
+
+    I18n: Update translation nb (100%).
+    
+    172 translated messages.
+    
+    Transifex (https://www.transifex.com/xfce/public/).
+
+commit 18f6dff83fdf6bd458bc37cb647b5406f9bbedf1
+Author: Xfce Bot <transifex@xfce.org>
+Date:   Wed Sep 20 01:04:43 2017 +0200
+
+    I18n: Update translation ms (100%).
+    
+    172 translated messages.
+    
+    Transifex (https://www.transifex.com/xfce/public/).
+
+commit 73f37a83e536b3439a2eebcac2a7d8ac90779634
+Author: Xfce Bot <transifex@xfce.org>
+Date:   Wed Sep 20 01:04:43 2017 +0200
+
+    I18n: Update translation lv (71%).
+    
+    123 translated messages, 49 untranslated messages.
+    
+    Transifex (https://www.transifex.com/xfce/public/).
+
+commit 1581e033b8cd87ff085db30d37f1b856836fd974
+Author: Anonymous <noreply@xfce.org>
+Date:   Wed Sep 20 01:04:43 2017 +0200
+
+    I18n: Update translation lt (100%).
+    
+    172 translated messages.
+    
+    Transifex (https://www.transifex.com/xfce/public/).
+
+commit 3c88d78fd46ac469f22720718f0e89d611966289
+Author: Xfce Bot <transifex@xfce.org>
+Date:   Wed Sep 20 01:04:43 2017 +0200
+
+    I18n: Update translation kk (100%).
+    
+    172 translated messages.
+    
+    Transifex (https://www.transifex.com/xfce/public/).
+
+commit 6074eb116c5583a029aaf14edeab5e376aece15f
+Author: Xfce Bot <transifex@xfce.org>
+Date:   Wed Sep 20 01:04:42 2017 +0200
+
+    I18n: Update translation ja (100%).
+    
+    172 translated messages.
+    
+    Transifex (https://www.transifex.com/xfce/public/).
+
+commit e286b063dd9d21c8addd86ae567b2df4db28a704
+Author: Xfce Bot <transifex@xfce.org>
+Date:   Wed Sep 20 01:04:42 2017 +0200
+
+    I18n: Update translation it (100%).
+    
+    172 translated messages.
+    
+    Transifex (https://www.transifex.com/xfce/public/).
+
+commit 73b9f686492f52b721c03cacbfcc5d18fcbd646f
+Author: Sveinn í Felli <sv1@fellsnet.is>
+Date:   Wed Sep 20 01:04:42 2017 +0200
+
+    I18n: Update translation is (100%).
+    
+    172 translated messages.
+    
+    Transifex (https://www.transifex.com/xfce/public/).
+
+commit 33dcc0c83a8a144854279f981314c0859f916122
+Author: Xfce Bot <transifex@xfce.org>
+Date:   Wed Sep 20 01:04:42 2017 +0200
+
+    I18n: Update translation id (100%).
+    
+    172 translated messages.
+    
+    Transifex (https://www.transifex.com/xfce/public/).
+
+commit 18674363ac673889dcb2f0bd047565ff5727ba73
+Author: Xfce Bot <transifex@xfce.org>
+Date:   Wed Sep 20 01:04:41 2017 +0200
+
+    I18n: Update translation hu (99%).
+    
+    171 translated messages, 1 untranslated message.
+    
+    Transifex (https://www.transifex.com/xfce/public/).
+
+commit f81fca5fb64bc8860e35f70522ad984d731ca8f2
+Author: Xfce Bot <transifex@xfce.org>
+Date:   Wed Sep 20 01:04:41 2017 +0200
+
+    I18n: Update translation hr (100%).
+    
+    172 translated messages.
+    
+    Transifex (https://www.transifex.com/xfce/public/).
+
+commit 508a806d277f60d7798a74039e60b1f3c0afd457
+Author: Xfce Bot <transifex@xfce.org>
+Date:   Wed Sep 20 01:04:41 2017 +0200
+
+    I18n: Update translation he (100%).
+    
+    172 translated messages.
+    
+    Transifex (https://www.transifex.com/xfce/public/).
+
+commit b167041f4f81d609ae4d25f2d4708d543cae0941
+Author: Xosé <xosecalvo@gmail.com>
+Date:   Wed Sep 20 01:04:41 2017 +0200
+
+    I18n: Update translation gl (99%).
+    
+    171 translated messages, 1 untranslated message.
+    
+    Transifex (https://www.transifex.com/xfce/public/).
+
+commit f86299059bde1585f6713b1daa72fb971120934a
+Author: Yannick Le Guen <leguen.yannick@gmail.com>
+Date:   Wed Sep 20 01:04:41 2017 +0200
+
+    I18n: Update translation fr (100%).
+    
+    172 translated messages.
+    
+    Transifex (https://www.transifex.com/xfce/public/).
+
+commit d012cd708903870b1d7a475aab2b4748a27ce01b
+Author: Xfce Bot <transifex@xfce.org>
+Date:   Wed Sep 20 01:04:40 2017 +0200
+
+    I18n: Update translation fi (100%).
+    
+    172 translated messages.
+    
+    Transifex (https://www.transifex.com/xfce/public/).
+
+commit 60c5bfc316898eb5f818407b81edc0c007042a70
+Author: Xfce Bot <transifex@xfce.org>
+Date:   Wed Sep 20 01:04:40 2017 +0200
+
+    I18n: Update translation eu (93%).
+    
+    161 translated messages, 11 untranslated messages.
+    
+    Transifex (https://www.transifex.com/xfce/public/).
+
+commit 3c014ed503433d478eb48fc3a340fb4fc8546350
+Author: Xfce Bot <transifex@xfce.org>
+Date:   Wed Sep 20 01:04:40 2017 +0200
+
+    I18n: Update translation es (100%).
+    
+    172 translated messages.
+    
+    Transifex (https://www.transifex.com/xfce/public/).
+
+commit 79d4a23ebfd810a2dba0f614035065b7232307dd
+Author: Xfce Bot <transifex@xfce.org>
+Date:   Wed Sep 20 01:04:40 2017 +0200
+
+    I18n: Update translation en_GB (93%).
+    
+    161 translated messages, 11 untranslated messages.
+    
+    Transifex (https://www.transifex.com/xfce/public/).
+
+commit caca4872e0b7b09fd622ac01ef3e31f690a7384d
+Author: Xfce Bot <transifex@xfce.org>
+Date:   Wed Sep 20 01:04:40 2017 +0200
+
+    I18n: Update translation en_AU (100%).
+    
+    172 translated messages.
+    
+    Transifex (https://www.transifex.com/xfce/public/).
+
+commit 28804f2fd6268da8927566f8005f92eb4eaf664b
+Author: Xfce Bot <transifex@xfce.org>
+Date:   Wed Sep 20 01:04:40 2017 +0200
+
+    I18n: Update translation el (100%).
+    
+    172 translated messages.
+    
+    Transifex (https://www.transifex.com/xfce/public/).
+
+commit 794754b1e9e1b0c2ce113b0bd18188a4ae38a481
+Author: Xfce Bot <transifex@xfce.org>
+Date:   Wed Sep 20 01:04:40 2017 +0200
+
+    I18n: Update translation de (100%).
+    
+    172 translated messages.
+    
+    Transifex (https://www.transifex.com/xfce/public/).
+
+commit 4c53237fb191408d649671881112b332f0e72dad
+Author: Anonymous <noreply@xfce.org>
+Date:   Wed Sep 20 01:04:39 2017 +0200
+
+    I18n: Update translation da (100%).
+    
+    172 translated messages.
+    
+    Transifex (https://www.transifex.com/xfce/public/).
+
+commit bf5a225e87e391274a9a321e7725c2d109fc6c9a
+Author: Xfce Bot <transifex@xfce.org>
+Date:   Wed Sep 20 01:04:39 2017 +0200
+
+    I18n: Update translation cs (100%).
+    
+    172 translated messages.
+    
+    Transifex (https://www.transifex.com/xfce/public/).
+
+commit eb121430b9284ca0004fc3dcdb9de17b22d64814
+Author: Xfce Bot <transifex@xfce.org>
+Date:   Wed Sep 20 01:04:39 2017 +0200
+
+    I18n: Update translation ca (100%).
+    
+    172 translated messages.
+    
+    Transifex (https://www.transifex.com/xfce/public/).
+
+commit ca817c97fd0e2353e5460bc85fe34af880cf6e7f
+Author: Anonymous <noreply@xfce.org>
+Date:   Wed Sep 20 01:04:39 2017 +0200
+
+    I18n: Update translation bn (77%).
+    
+    133 translated messages, 39 untranslated messages.
+    
+    Transifex (https://www.transifex.com/xfce/public/).
+
+commit 019be7ce788e6330005244671996b2f4d58ba47f
+Author: Xfce Bot <transifex@xfce.org>
+Date:   Wed Sep 20 01:04:39 2017 +0200
+
+    I18n: Update translation bg (100%).
+    
+    172 translated messages.
+    
+    Transifex (https://www.transifex.com/xfce/public/).
+
+commit da7f342384c0147e2b2b670111b5c8be39b6022e
+Author: Xfce Bot <transifex@xfce.org>
+Date:   Wed Sep 20 01:04:39 2017 +0200
+
+    I18n: Update translation ast (93%).
+    
+    160 translated messages, 12 untranslated messages.
+    
+    Transifex (https://www.transifex.com/xfce/public/).
+
+commit 2b0805944a51c33ceb10dfd4929e8f39a5cfbedc
+Author: Anonymous <noreply@xfce.org>
+Date:   Wed Sep 20 01:04:36 2017 +0200
+
+    I18n: Update translation ar (100%).
+    
+    172 translated messages.
+    
+    Transifex (https://www.transifex.com/xfce/public/).
+
+commit 30b5dd08dd1565f957677b1158b2fbde60e51c1d
+Author: Seong-ho Cho <darkcircle.0426@gmail.com>
+Date:   Sat Sep 16 18:32:19 2017 +0200
+
+    I18n: Update translation ko (100%).
+    
+    172 translated messages.
+    
+    Transifex (https://www.transifex.com/xfce/public/).
+
+commit 29134c9587d772977fcf96fb0644850a61df8310
+Author: Anonymous <noreply@xfce.org>
+Date:   Wed Sep 13 18:38:12 2017 +0200
+
+    I18n: Update translation da (100%).
+    
+    172 translated messages.
+    
+    Transifex (https://www.transifex.com/xfce/public/).
+
+commit 925b88ce7197779e743945380a8a1b59aacc82d2
+Author: José Vieira <jvieira33@sapo.pt>
+Date:   Mon Sep 4 00:31:52 2017 +0200
+
+    I18n: Update translation pt (100%).
+    
+    172 translated messages.
+    
+    Transifex (https://www.transifex.com/xfce/public/).
+
+commit 1709883a0914f7cd155c5a6717eb2e9846e0f950
+Author: Michael Martins <michaelfm21@gmail.com>
+Date:   Tue Aug 29 06:39:03 2017 +0200
+
+    I18n: Update translation pt_BR (100%).
+    
+    172 translated messages.
+    
+    Transifex (https://www.transifex.com/xfce/public/).
+
+commit b9f910bdc603e0f253a452c2a56d08c650dceff5
+Author: Anonymous <noreply@xfce.org>
+Date:   Wed Aug 23 12:32:41 2017 +0200
+
+    I18n: Update translation bn (77%).
+    
+    133 translated messages, 39 untranslated messages.
+    
+    Transifex (https://www.transifex.com/xfce/public/).
+
+commit f51c69884db3f1cacc77780607de0c05556dad03
+Author: Yannick Le Guen <leguen.yannick@gmail.com>
+Date:   Fri Aug 18 12:32:20 2017 +0200
+
+    I18n: Update translation fr (100%).
+    
+    172 translated messages.
+    
+    Transifex (https://www.transifex.com/xfce/public/).
+
+commit 25801b2e7162f091a092c5265b621f054c54da87
+Author: Anonymous <noreply@xfce.org>
+Date:   Sun Jul 23 00:32:07 2017 +0200
+
+    I18n: Update translation da (100%).
+    
+    172 translated messages.
+    
+    Transifex (https://www.transifex.com/xfce/public/).
+
+commit 4a189e8b2cc428a90d67837264fea65fbd82664b
+Author: Anonymous <noreply@xfce.org>
+Date:   Fri Jul 21 00:31:58 2017 +0200
+
+    I18n: Update translation lt (100%).
+    
+    172 translated messages.
+    
+    Transifex (https://www.transifex.com/xfce/public/).
+
+commit 4fe25fc10395f5b78e8f46f069ca18aa122e7ed1
+Author: Anonymous <noreply@xfce.org>
+Date:   Sun Jul 9 18:32:22 2017 +0200
+
+    I18n: Update translation ar (100%).
+    
+    172 translated messages.
+    
+    Transifex (https://www.transifex.com/xfce/public/).
+
+commit d7eec05f65cb85698f797612da678f2708335f3e
+Author: Anonymous <noreply@xfce.org>
+Date:   Sat Jul 8 12:32:31 2017 +0200
+
+    I18n: Update translation ar (98%).
+    
+    170 translated messages, 2 untranslated messages.
+    
+    Transifex (https://www.transifex.com/xfce/public/).
+
+commit 3a8491bc26ae5219d398cf901650e456afe599ef
+Author: Anonymous <noreply@xfce.org>
+Date:   Fri Jul 7 06:32:13 2017 +0200
+
+    I18n: Update translation lt (100%).
+    
+    172 translated messages.
+    
+    Transifex (https://www.transifex.com/xfce/public/).
+
+commit f28f7841bc248e5048c265605b3b9fa2d610e9f6
+Author: Anonymous <noreply@xfce.org>
+Date:   Fri Jul 7 00:32:07 2017 +0200
+
+    I18n: Update translation lt (100%).
+    
+    172 translated messages.
+    
+    Transifex (https://www.transifex.com/xfce/public/).
+
+commit 804e3528aa66c79ca97d1a5042b5cf17717199c9
+Author: Anonymous <noreply@xfce.org>
+Date:   Mon Jul 3 00:33:17 2017 +0200
+
+    I18n: Update translation lt (100%).
+    
+    172 translated messages.
+    
+    Transifex (https://www.transifex.com/xfce/public/).
+
+commit ee73b7066cdf410358157d2f6735ee1b957dde78
+Author: Anonymous <noreply@xfce.org>
+Date:   Sun Jun 18 06:34:25 2017 +0200
+
+    I18n: Update translation lt (100%).
+    
+    172 translated messages.
+    
+    Transifex (https://www.transifex.com/projects/p/xfce/).
+
+commit 39b2f77ba2936a7e6bc60c1a956daf7748759328
+Author: Xosé <xosecalvo@gmail.com>
+Date:   Wed Jun 14 00:31:52 2017 +0200
+
+    I18n: Update translation gl (99%).
+    
+    171 translated messages, 1 untranslated message.
+    
+    Transifex (https://www.transifex.com/projects/p/xfce/).
+
+commit c375fdf9150abb0de1f2d595a3a2f97450677ec4
+Author: 박정규(Jung-Kyu Park) <bagjunggyu@gmail.com>
+Date:   Tue Jun 13 00:31:59 2017 +0200
+
+    I18n: Update translation ko (100%).
+    
+    172 translated messages.
+    
+    Transifex (https://www.transifex.com/projects/p/xfce/).
+
+commit aee8b25a522d84e2453ed4049a018ca17a6b9525
+Author: Marcel Partap <mpartap@gmx.net>
+Date:   Sun May 7 11:36:14 2017 +0200
+
+    Do not prevent ALT+Mouse resizing for borderless maximized windows.
+
+commit 7d9e6ceda2d02b4f1f00ce70e86333317c3369a1
+Author: Olivier Fourdan <fourdan@xfce.org>
+Date:   Fri Jun 9 13:34:30 2017 +0200
+
+    compositor: Disable XPresent on error
+    
+    Bug: 13607
+    
+    If XPresentPixmap() fails, we would disable Present rather that waiting
+    for a notification that will never arrive.
+    
+    But that relies on the actual window to be reported in the XError, which
+    is not necessarily the case.
+    
+    Disable Xpresent for all screens as we are not sure we can tell which
+    one from the resource id.
+
+commit b2c7463452de38e25e11cdb4fe2ce5faef9cc316
+Author: Błażej Szczygieł <spaz16@wp.pl>
+Date:   Thu Jun 1 21:06:42 2017 +0200
+
+    compositor: remove old vblank code
+    
+    Bug: 13613
+    
+    Since commit 7115d1b, we can't disable second (broken) vblank waiting
+    code.
+    
+    glXSwapBuffers() already waits for v-blank (if enabled in driver), so
+    any other "synthetic" waiting for v-blank can reduce performance
+    (de-sync) without actual benefit.
+    
+    This patch removes old code to prevent waiting for vblank twice.
+
+commit 0c7bc537e215e4910430fb561ad6268a90f519f6
+Author: Olivier Fourdan <fourdan@xfce.org>
+Date:   Thu Jun 1 09:30:40 2017 +0200
+
+    screen: Fix broken monitor index
+    
+    Bug: 13608
+    
+    Commit 5895577 (Use ximerama indices for _NET_WM_FULLSCREEN_MONITORS)
+    introduced a regression because the monitor index was wrongly compared
+    against the total number of monitors, which would falsely assume that
+    the Xrandr query failed whereas it actually worked.
+    
+    Fix the false comparison and also use the screen size as fallback values
+    in case the Xrandr really failed so that we don't end up using random
+    uninitialized values.
+
+commit b393814d1cc94c1670924a469b1a428f369b3af4
+Author: Sveinn í Felli <sv1@fellsnet.is>
+Date:   Sun May 28 06:33:27 2017 +0200
+
+    I18n: Update translation is (100%).
+    
+    172 translated messages.
+    
+    Transifex (https://www.transifex.com/projects/p/xfce/).
+
+commit 13d3c1cd3bf5c75b2124972a6967bf49f73ffd98
+Author: José Vieira <jvieira33@sapo.pt>
+Date:   Tue May 23 18:32:26 2017 +0200
+
+    I18n: Update translation pt (100%).
+    
+    172 translated messages.
+    
+    Transifex (https://www.transifex.com/projects/p/xfce/).
+
+commit 940cfef1c7b5828b951b392b75baecc1638619be
+Author: Olivier Fourdan <fourdan@xfce.org>
+Date:   Mon May 15 09:00:45 2017 +0200
+
+    compositor: Remove present env var
+    
+    Prefer Present over GLX if both are available, and remove the
+    environment variable "XFWM4_USE_PRESENT".
+    
+    Eventually, we'd rather use a command line option instead (TODO).
+
+commit 7115d1b4f4021043bb59e6acafa105cb77fe5b9d
+Author: Olivier Fourdan <fourdan@xfce.org>
+Date:   Mon May 15 08:56:42 2017 +0200
+
+    compositor: Remove vblank option
+    
+    This is a leftover of the old (broken) vblank code.
+
+commit 9957149fb242ca6b4b8361e948aebb0302066dea
+Author: Olivier Fourdan <fourdan@xfce.org>
+Date:   Mon May 15 08:50:08 2017 +0200
+
+    compositor: update presentproto requirement
+    
+    Bug: 13257
+    
+    presentproto headers version 1.1 includes a fix required for libXpresent
+    so we ought to require that.
+
+commit f7fe89ab59a25c6e23db56b94b6243915fd5ecdb
+Author: Olivier Fourdan <fourdan@xfce.org>
+Date:   Mon May 1 22:23:41 2017 +0200
+
+    Flush display to catch possible errors
+    
+    Otherwise the current WM window might have vanished and we wouldn't
+    know.
+
+commit 3034d653f035d799b7758eb5b45c2660fa32dbab
+Author: Olivier Fourdan <fourdan@xfce.org>
+Date:   Mon May 1 22:21:11 2017 +0200
+
+    Fix typo in flag name
+
+commit 589557792e38e545613d67628a65c2abcf24a193
+Author: Olivier Fourdan <fourdan@xfce.org>
+Date:   Mon May 1 22:15:49 2017 +0200
+
+    Use ximerama indices for _NET_WM_FULLSCREEN_MONITORS
+    
+    Bug: 9351
+    
+    _NET_WM_FULLSCREEN_MONITORS uses Xinerama indices for multi-monitor
+    fullscreen, but xfwm4 uses gdk indices which may differ.
+    
+    As a result, depending on the actual layout and which monitor is marked
+    as primary, a fullscreen window could be placed on the wrong outputs.
+    
+    Fetch the Xinerama list and use the monitor size from there instead of
+    relying on gdk monitor indices for _NET_WM_FULLSCREEN_MONITORS
+
+commit 012bdbfc826466d7ffae0c52387ae949aa17aabe
+Author: Olivier Fourdan <fourdan@xfce.org>
+Date:   Thu Mar 23 11:40:46 2017 +0100
+
+    Revert "Add PointerMotionHintMask"
+    
+    Bug: 12534
+    
+    This reverts commit 0dfb55407a830572f03297b3c118fac1f3c5b80d.
+
+commit 111768566c131038fb5e5bddd0f4d7dacdc70f56
+Author: Olivier Fourdan <fourdan@xfce.org>
+Date:   Thu Mar 23 11:39:04 2017 +0100
+
+    placement: Use primary monitor as default
+    
+    Bug: 13454
+    
+    We would use the first monitor by default, but we'd rather use the
+    primary monitor.
+    
+    Signed-off-by: Olivier Fourdan <fourdan@xfce.org>
+
+commit 47cfd5d26ff7f8959bd108c449d3bec1d5d418e3
+Author: Anonymous <noreply@xfce.org>
+Date:   Thu Apr 13 18:33:59 2017 +0200
+
+    I18n: Update translation lt (100%).
+    
+    173 translated messages.
+    
+    Transifex (https://www.transifex.com/projects/p/xfce/).
+
+commit 84ef731d4ccf167886d4d2ed0557ebf8882105d7
+Author: Olivier Fourdan <fourdan@xfce.org>
+Date:   Tue Mar 21 09:56:41 2017 +0100
+
+    netwm: avoid spurious warning on restart
+    
+    NET_WM_STATE_FOCUS is set by the WM itself, it's not an unknown
+    property.
+
+commit 087decc60f7c8c94e0f9734bdb66d910b8aea59a
+Author: Unit 193 <unit193@ubuntu.com>
+Date:   Fri Mar 17 17:57:18 2017 -0400
+
+    Fix a spelling mistake.
+
+commit d43cacb07c1b705d09e0db33488109e6dc958239
+Author: Xosé <xosecalvo@gmail.com>
+Date:   Tue Mar 21 00:33:12 2017 +0100
+
+    I18n: Update translation gl (98%).
+    
+    170 translated messages, 3 untranslated messages.
+    
+    Transifex (https://www.transifex.com/projects/p/xfce/).
+
+commit 922469c132a5be0419095ee4accb9b3e3335d926
+Author: Anonymous <noreply@xfce.org>
+Date:   Mon Mar 20 12:32:10 2017 +0100
+
+    I18n: Update translation lt (100%).
+    
+    173 translated messages.
+    
+    Transifex (https://www.transifex.com/projects/p/xfce/).
+
+commit cb1d8fd9c6c62b04b1dca0d86eda165b94ce3d52
+Author: Olivier Fourdan <fourdan@xfce.org>
+Date:   Thu Mar 16 08:51:41 2017 +0100
+
+    Post release tag bump.
+    
+    Signed-off-by: Olivier Fourdan <fourdan@xfce.org>
+
+commit b3e2686bea4aec26fe95db4938abc3820308e265
 Author: Olivier Fourdan <fourdan@xfce.org>
 Date:   Thu Mar 16 08:37:49 2017 +0100
 
@@ -2304,14 +4701,14 @@ Date:   Fri Mar 27 21:46:16 2015 +0100
     Signed-off-by: Olivier Fourdan <fourdan@xfce.org>
 
 commit bc03559e3e36fc8178f6ef0c0ab36fcd76c46e51
-Merge: c5a5ce0 99cfe8d
+Merge: c5a5ce0f 99cfe8dd
 Author: Olivier Fourdan <fourdan@xfce.org>
 Date:   Fri Mar 27 21:28:06 2015 +0100
 
     Merge branch 'scale-cursor'
 
 commit c5a5ce0fd8b4e59f99078f816bcc9e18d804df8c
-Merge: 104c6ce 8fbff6c
+Merge: 104c6cec 8fbff6ce
 Author: Olivier Fourdan <fourdan@xfce.org>
 Date:   Fri Mar 27 21:22:25 2015 +0100
 
@@ -3540,7 +5937,7 @@ Date:   Thu Jan 22 12:31:59 2015 +0100
     Transifex (https://www.transifex.com/projects/p/xfce/).
 
 commit db626a73b286bd44b94dc3b9fc7556e0a695a4c1
-Merge: f079ff3 82e4409
+Merge: f079ff3c 82e44091
 Author: Olivier Fourdan <fourdan@xfce.org>
 Date:   Tue Jan 20 22:30:27 2015 +0100
 
@@ -3553,7 +5950,7 @@ Date:   Tue Jan 20 22:30:00 2015 +0100
     Unset RESTORE_SIZE_POS on resize.
 
 commit f079ff3ce479ea60b5771a1829e5e5d591b89550
-Merge: 8e809ba cd73bb7
+Merge: 8e809bac cd73bb72
 Author: Olivier Fourdan <fourdan@xfce.org>
 Date:   Tue Jan 20 21:55:47 2015 +0100
 
@@ -4470,7 +6867,7 @@ Date:   Sat Dec 6 00:32:07 2014 +0100
     Transifex (https://www.transifex.com/projects/p/xfce/).
 
 commit 61c2a6bf86f745f149ee81088116f56cda64d4e8
-Merge: 045e811 b6171c1
+Merge: 045e811f b6171c17
 Author: Olivier Fourdan <fourdan@xfce.org>
 Date:   Fri Dec 5 14:03:11 2014 +0100
 
@@ -7010,7 +9407,7 @@ Date:   Sun Dec 30 18:44:42 2012 +0100
     Transmitted-via: Transifex (translations.xfce.org).
 
 commit 8cd895fdd7f684d6a631e6d29a9f4f50a513da00
-Merge: d5f3b8f 6b8259e
+Merge: d5f3b8f4 6b8259ee
 Author: Jérôme Guelfucci <jeromeg@xfce.org>
 Date:   Sun Dec 30 15:37:15 2012 +0100
 
@@ -12432,7 +14829,7 @@ Date:   Sat Mar 6 12:51:48 2010 +0100
     Enforce link to libxfce4ui.
 
 commit fe18886f8a81a1d8f0814da56b932398ada68cfb
-Merge: 5b50425 4f7a589
+Merge: 5b50425d 4f7a589a
 Author: Olivier Fourdan <fourdan@xfce.org>
 Date:   Fri Mar 5 10:52:38 2010 +0100
 
@@ -12893,7 +15290,7 @@ Date:   Wed Jan 13 15:35:36 2010 +0100
     Transmitted-via: Transifex (translations.xfce.org).
 
 commit f9068ec3519ecf1b077f8868a0d997373966d683
-Merge: c1a867e cebe5f8
+Merge: c1a867e6 cebe5f8d
 Author: Stephan Arts <stephan@xfce.org>
 Date:   Sun Jan 10 10:22:34 2010 +0100
 
@@ -12977,7 +15374,7 @@ Date:   Tue Dec 15 10:54:31 2009 +0000
     Transmitted-via: Transifex (translations.xfce.org)
 
 commit 0a64813cd3cf69a54375ac8da939daa7f4b19d35
-Merge: 2d19268 cdabb3b
+Merge: 2d19268c cdabb3b3
 Author: Nick Schermer <nick@xfce.org>
 Date:   Tue Dec 15 00:53:22 2009 +0100
 
@@ -13161,7 +15558,7 @@ Date:   Thu Sep 10 14:11:17 2009 +0200
     Sanitize build with -Wall -Werror
 
 commit 8d9cb7fdabb0229e5db46646fdf54124e9307021
-Merge: 9166f38 0f62544
+Merge: 9166f38e 0f625442
 Author: Olivier Fourdan <fourdan@xfce.org>
 Date:   Wed Sep 9 20:48:23 2009 +0200
 
@@ -13250,7 +15647,7 @@ Date:   Thu Aug 20 03:15:01 2009 +0000
     Transmitted-via: Transifex (translations.xfce.org)
 
 commit a1f674d35d5cb8d85239c5427868a3a122a89303
-Merge: 34ed718 ad8be28
+Merge: 34ed718c ad8be286
 Author: Olivier Fourdan <fourdan@xfce.org>
 Date:   Mon Aug 17 17:23:32 2009 +0200
 
