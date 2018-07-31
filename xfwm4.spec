@@ -4,7 +4,7 @@
 #
 Name     : xfwm4
 Version  : 4.13.1
-Release  : 22
+Release  : 23
 URL      : http://archive.xfce.org/src/xfce/xfwm4/4.13/xfwm4-4.13.1.tar.bz2
 Source0  : http://archive.xfce.org/src/xfce/xfwm4/4.13/xfwm4-4.13.1.tar.bz2
 Summary  : No detailed summary available
@@ -85,7 +85,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1533055928
+export SOURCE_DATE_EPOCH=1533058512
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
 export NM=gcc-nm
@@ -104,7 +104,7 @@ export no_proxy=localhost,127.0.0.1,0.0.0.0
 make VERBOSE=1 V=1 %{?_smp_mflags} check
 
 %install
-export SOURCE_DATE_EPOCH=1533055928
+export SOURCE_DATE_EPOCH=1533058512
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/doc/xfwm4
 cp COPYING %{buildroot}/usr/share/doc/xfwm4/COPYING
