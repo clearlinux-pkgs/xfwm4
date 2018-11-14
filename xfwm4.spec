@@ -4,16 +4,16 @@
 #
 Name     : xfwm4
 Version  : 4.13.1
-Release  : 23
+Release  : 24
 URL      : http://archive.xfce.org/src/xfce/xfwm4/4.13/xfwm4-4.13.1.tar.bz2
 Source0  : http://archive.xfce.org/src/xfce/xfwm4/4.13/xfwm4-4.13.1.tar.bz2
 Summary  : No detailed summary available
 Group    : Development/Tools
 License  : GPL-2.0
-Requires: xfwm4-bin
-Requires: xfwm4-data
-Requires: xfwm4-license
-Requires: xfwm4-locales
+Requires: xfwm4-bin = %{version}-%{release}
+Requires: xfwm4-data = %{version}-%{release}
+Requires: xfwm4-license = %{version}-%{release}
+Requires: xfwm4-locales = %{version}-%{release}
 BuildRequires : intltool
 BuildRequires : pkgconfig(gtk+-2.0)
 BuildRequires : pkgconfig(gtk+-3.0)
@@ -45,8 +45,8 @@ Xfwm is compliant with the following specifications from the freedesktop.org
 %package bin
 Summary: bin components for the xfwm4 package.
 Group: Binaries
-Requires: xfwm4-data
-Requires: xfwm4-license
+Requires: xfwm4-data = %{version}-%{release}
+Requires: xfwm4-license = %{version}-%{release}
 
 %description bin
 bin components for the xfwm4 package.
@@ -85,7 +85,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1533058512
+export SOURCE_DATE_EPOCH=1542224843
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
 export NM=gcc-nm
@@ -104,10 +104,10 @@ export no_proxy=localhost,127.0.0.1,0.0.0.0
 make VERBOSE=1 V=1 %{?_smp_mflags} check
 
 %install
-export SOURCE_DATE_EPOCH=1533058512
+export SOURCE_DATE_EPOCH=1542224843
 rm -rf %{buildroot}
-mkdir -p %{buildroot}/usr/share/doc/xfwm4
-cp COPYING %{buildroot}/usr/share/doc/xfwm4/COPYING
+mkdir -p %{buildroot}/usr/share/package-licenses/xfwm4
+cp COPYING %{buildroot}/usr/share/package-licenses/xfwm4/COPYING
 %make_install
 %find_lang xfwm4
 
@@ -870,8 +870,8 @@ cp COPYING %{buildroot}/usr/share/doc/xfwm4/COPYING
 /usr/share/xfwm4/defaults
 
 %files license
-%defattr(-,root,root,-)
-/usr/share/doc/xfwm4/COPYING
+%defattr(0644,root,root,0755)
+/usr/share/package-licenses/xfwm4/COPYING
 
 %files locales -f xfwm4.lang
 %defattr(-,root,root,-)
