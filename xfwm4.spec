@@ -4,7 +4,7 @@
 #
 Name     : xfwm4
 Version  : 4.13.1
-Release  : 25
+Release  : 26
 URL      : http://archive.xfce.org/src/xfce/xfwm4/4.13/xfwm4-4.13.1.tar.bz2
 Source0  : http://archive.xfce.org/src/xfce/xfwm4/4.13/xfwm4-4.13.1.tar.bz2
 Summary  : No detailed summary available
