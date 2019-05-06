@@ -4,10 +4,10 @@
 #
 Name     : xfwm4
 Version  : 4.13.1
-Release  : 26
+Release  : 27
 URL      : http://archive.xfce.org/src/xfce/xfwm4/4.13/xfwm4-4.13.1.tar.bz2
 Source0  : http://archive.xfce.org/src/xfce/xfwm4/4.13/xfwm4-4.13.1.tar.bz2
-Summary  : No detailed summary available
+Summary  : Xfce window manager
 Group    : Development/Tools
 License  : GPL-2.0
 Requires: xfwm4-bin = %{version}-%{release}
@@ -85,7 +85,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1542224843
+export SOURCE_DATE_EPOCH=1557105765
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
 export NM=gcc-nm
@@ -104,7 +104,7 @@ export no_proxy=localhost,127.0.0.1,0.0.0.0
 make VERBOSE=1 V=1 %{?_smp_mflags} check
 
 %install
-export SOURCE_DATE_EPOCH=1542224843
+export SOURCE_DATE_EPOCH=1557105765
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/xfwm4
 cp COPYING %{buildroot}/usr/share/package-licenses/xfwm4/COPYING

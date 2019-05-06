@@ -1,13 +1,5 @@
 libX11.so.6
-libXcomposite.so.1
-libXdamage.so.1
-libXext.so.6
-libXfixes.so.3
-libXi.so.6
-libXinerama.so.1
 libXpresent.so.1
-libXrandr.so.2
-libXrender.so.1
 libc.so.6
 libcairo.so.2
 libepoxy.so.0
@@ -20,7 +12,6 @@ libgtk-3.so.0
 libm.so.6
 libpango-1.0.so.0
 libpangocairo-1.0.so.0
-libpthread.so.0
 libstartup-notification-1.so.0
 libwnck-3.so.0
 libxfce4kbd-private-3.so.0
