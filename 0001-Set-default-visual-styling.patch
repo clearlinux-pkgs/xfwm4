@@ -1,18 +1,19 @@
-From 48c9e3fe751c761c5dafc9d5ce551b8368e844ab Mon Sep 17 00:00:00 2001
+From 42ac9dd25ff247758403c4e6c2f13a3f30d9d5a0 Mon Sep 17 00:00:00 2001
 From: Ikey Doherty <michael.i.doherty@intel.com>
 Date: Tue, 5 May 2015 14:20:11 +0100
 Subject: [PATCH] Set default visual styling
 
 Signed-off-by: Ikey Doherty <michael.i.doherty@intel.com>
+Signed-off-by: Patrick McCarty <patrick.mccarty@intel.com>
 ---
- defaults/defaults | 6 +++---
- 1 file changed, 3 insertions(+), 3 deletions(-)
+ defaults/defaults | 8 ++++----
+ 1 file changed, 4 insertions(+), 4 deletions(-)
 
 diff --git a/defaults/defaults b/defaults/defaults
-index 2b1ba5b..2f9b4de 100644
+index cf3d870..c085042 100644
 --- a/defaults/defaults
 +++ b/defaults/defaults
-@@ -52,11 +52,11 @@ snap_resist=false
+@@ -53,11 +53,11 @@ snap_resist=false
  snap_to_border=true
  snap_to_windows=false
  snap_width=10
@@ -27,17 +28,15 @@ index 2b1ba5b..2f9b4de 100644
  title_horizontal_offset=0
  titleless_maximize=false
  title_shadow_active=false
--- 
-2.7.0
-
---- xfwm4-4.12.3/defaults/defaults~	2015-05-15 12:25:56.000000000 +0000
-+++ xfwm4-4.12.3/defaults/defaults	2016-06-28 13:21:30.459423207 +0000
-@@ -66,7 +66,7 @@
+@@ -67,7 +67,7 @@ title_vertical_offset_inactive=0
  toggle_workspaces=false
  unredirect_overlays=true
  urgent_blink=false
 -use_compositing=true
 +use_compositing=false
+ vblank_mode=auto
  workspace_count=4
  wrap_cycle=true
- wrap_layout=true
+-- 
+2.21.0
+
