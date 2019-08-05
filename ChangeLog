@@ -1,3 +1,213 @@
+commit b1872fda18ce69a27d140fe7b4456318337f4a96
+Author: Olivier Fourdan <fourdan@xfce.org>
+Date:   Sat Jul 27 16:42:45 2019 +0200
+
+    Release 4.13.4!
+    
+    Signed-off-by: Olivier Fourdan <fourdan@xfce.org>
+
+commit c7e73e3d671cec7f659da1acc16f442e5979dbf5
+Author: Kjell Cato Heskjestad <cato@heskjestad.xyz>
+Date:   Thu Jul 25 12:32:47 2019 +0200
+
+    I18n: Update translation nb (100%).
+    
+    168 translated messages.
+    
+    Transifex (https://www.transifex.com/xfce/public/).
+
+commit 5640e9d32cc4f55371e7dff6bc28e661ddec9e8b
+Author: Kjell Cato Heskjestad <cato@heskjestad.xyz>
+Date:   Tue Jul 23 18:34:25 2019 +0200
+
+    I18n: Update translation nb (100%).
+    
+    168 translated messages.
+    
+    Transifex (https://www.transifex.com/xfce/public/).
+
+commit c4dfbda66984a47c47807ae7434dc149c3cfb1bd
+Author: Nobuhiro Iwamatsu <iwamatsu@nigauri.org>
+Date:   Mon Jul 22 18:32:57 2019 +0200
+
+    I18n: Update translation ja (100%).
+    
+    168 translated messages.
+    
+    Transifex (https://www.transifex.com/xfce/public/).
+
+commit d01fda0d382607e467edd4cab5b8edd78acd3f9e
+Author: Michael Martins <michaelfm21@gmail.com>
+Date:   Sat Jul 20 06:32:00 2019 +0200
+
+    I18n: Update translation pt_BR (100%).
+    
+    168 translated messages.
+    
+    Transifex (https://www.transifex.com/xfce/public/).
+
+commit ea929e2e5621bb67fca9e1ba6d8916aa5392140a
+Author: Саша Петровић <salepetronije@gmail.com>
+Date:   Wed Jul 17 18:32:12 2019 +0200
+
+    I18n: Update translation sr (100%).
+    
+    168 translated messages.
+    
+    Transifex (https://www.transifex.com/xfce/public/).
+
+commit cc0942a5c3f74f5d3affd43d911fa518c6ddf5ec
+Author: Jiri Grönroos <jiri.gronroos@iki.fi>
+Date:   Wed Jul 17 12:36:39 2019 +0200
+
+    I18n: Update translation fi (100%).
+    
+    168 translated messages.
+    
+    Transifex (https://www.transifex.com/xfce/public/).
+
+commit cc60a65e85356e22499448490a9d0fa66891de58
+Author: Jiri Grönroos <jiri.gronroos@iki.fi>
+Date:   Wed Jul 17 00:37:05 2019 +0200
+
+    I18n: Update translation fi (99%).
+    
+    167 translated messages, 1 untranslated message.
+    
+    Transifex (https://www.transifex.com/xfce/public/).
+
+commit 8041a3cf06749926e308708f76dfa7892c9bd69c
+Author: Olivier Fourdan <fourdan@xfce.org>
+Date:   Tue Aug 25 16:51:52 2015 +0200
+
+    compositor: Enable root pixmap by default
+    
+    Bug: 15709
+    
+    Signed-off-by: Olivier Fourdan <fourdan@xfce.org>
+    (cherry picked from commit 6caed779e627c368e2d3e578d1fad60cd7ef1d18)
+
+commit cd3134f7e08aadee4013eea80f4006884dbafaa4
+Author: Baurzhan Muftakhidinov <baurthefirst@gmail.com>
+Date:   Sun Jul 14 18:34:06 2019 +0200
+
+    I18n: Update translation kk (100%).
+    
+    168 translated messages.
+    
+    Transifex (https://www.transifex.com/xfce/public/).
+
+commit 5b0d805cc36df00d00d8ab59b5beef009b2a42b4
+Author: Theppitak Karoonboonyanan <theppitak@gmail.com>
+Date:   Wed Jul 10 12:33:05 2019 +0200
+
+    I18n: Update translation th (100%).
+    
+    168 translated messages.
+    
+    Transifex (https://www.transifex.com/xfce/public/).
+
+commit b56bb5e49e6273308c06156706c8f8710f80f183
+Author: Yarema aka Knedlyk <yupadmin@gmail.com>
+Date:   Wed Jul 10 00:33:51 2019 +0200
+
+    I18n: Update translation uk (100%).
+    
+    168 translated messages.
+    
+    Transifex (https://www.transifex.com/xfce/public/).
+
+commit d9af18135348afa59f1a54362367a48eef81876f
+Author: Olivier Fourdan <fourdan@xfce.org>
+Date:   Tue Jul 9 21:39:38 2019 +0200
+
+    stacking: Limit to direct transients when raising
+    
+    Bug: 15580
+    
+    Following commit fa9517eae (“Raise all transients together”), xfwm4
+    would search for the deepest parent of a given transient and raise it to
+    bring all related windows together.
+    
+    however, taking into account parents from the same group, it would raise
+    the lowest window while the others from the same group aren't raised
+    along with it, causing apparently random windows to be raised.
+    
+    Make sure we pick only direct transients when walking down the windows
+    stack.
+    
+    Signed-off-by: Olivier Fourdan <fourdan@xfce.org>
+
+commit 619929ba532c6a1d392c9584e9858f46549a3787
+Author: Olivier Fourdan <fourdan@xfce.org>
+Date:   Mon Jul 8 21:15:16 2019 +0200
+
+    placement: Place on current monitor by default
+    
+    Bug: 14959
+    
+    Place dialogs without parent on the current monitor, i.e. the monitor
+    where the pointer currently resides.
+    
+    Signed-off-by: Olivier Fourdan <fourdan@xfce.org>
+
+commit 95bc0b26a0caf7abe7d40f4aeac9cb21d4d1e47b
+Author: Olivier Fourdan <fourdan@xfce.org>
+Date:   Fri Jul 5 22:02:04 2019 +0200
+
+    Revert "compositor: Pass the buffer number around"
+    
+    This breaks zooming without GLX, reverting.
+    
+    This reverts commit 18721a1abe08cb76aeb37ee7deda664602625c93.
+    
+    Signed-off-by: Olivier Fourdan <fourdan@xfce.org>
+
+commit 7a92d0329483a6adaac6615ec39172345398951c
+Author: Juha Aatrokoski <jha@iki.fi>
+Date:   Thu Jul 4 10:49:04 2019 +0300
+
+    compositor: Fix GL texture filter
+    
+    Bug: 15676
+    
+    Between versions 4.13.1 and 4.13.2 the GL_NEAREST filter (used on the
+    deepest levels of desktop zoom) stopped working, and GL_LINEAR was
+    used instead. Fix by setting GL_TEXTURE_MIN_FILTER in addition to
+    GL_TEXTURE_MAG_FILTER, like was done in version 4.13.1; apparently the
+    former needs to be correctly configured for the latter to take effect.
+    
+    Signed-off-by: Juha Aatrokoski <jha@iki.fi>
+
+commit 9b37f453ee6bf6dc1698fa330cef79876f698fc1
+Author: Olivier Fourdan <fourdan@xfce.org>
+Date:   Wed Jul 3 21:25:01 2019 +0200
+
+    compositor: Timeout repaint in no longer optional
+    
+    Also increase the timeout value to be just above the default priority.
+    
+    Suggested-by: <howaboutsynergy@protonmail.com>
+    Signed-off-by: Olivier Fourdan <fourdan@xfce.org>
+
+commit d08a6e56575667ed4e52edb61e08a2c0d36dfe5e
+Author: Real School <translator_students@realschool.am>
+Date:   Wed Jul 3 12:32:44 2019 +0200
+
+    I18n: Update translation hy_AM (100%).
+    
+    168 translated messages.
+    
+    Transifex (https://www.transifex.com/xfce/public/).
+
+commit 5235f6ced27acf35c06d3575e8e202b57bf29662
+Author: Olivier Fourdan <fourdan@xfce.org>
+Date:   Sun Jun 30 22:17:53 2019 +0200
+
+    Post release tag bump
+    
+    Signed-off-by: Olivier Fourdan <fourdan@xfce.org>
+
 commit d3ed95bc6cff85355b9ed6dda2b60632708a383e
 Author: Olivier Fourdan <fourdan@xfce.org>
 Date:   Sun Jun 30 16:54:21 2019 +0200
