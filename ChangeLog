@@ -1,3 +1,64 @@
+commit ed87ef663463712f379210aebbad06a4d694f86f
+Author: Kjell Cato Heskjestad <cato@heskjestad.xyz>
+Date:   Sun Aug 11 06:32:30 2019 +0200
+
+    I18n: Update translation nb (100%).
+    
+    169 translated messages.
+    
+    Transifex (https://www.transifex.com/xfce/public/).
+
+commit a60c913c11d964c7d2a589e3e1e80fb7dbc7af8c
+Author: Emanuele Petriglia <transifex@emanuelepetriglia.com>
+Date:   Thu Aug 8 18:36:22 2019 +0200
+
+    I18n: Update translation it (100%).
+    
+    169 translated messages.
+    
+    Transifex (https://www.transifex.com/xfce/public/).
+
+commit 8cf67acc21658af1c98dcf781ffc676c2220032c
+Author: Daniel Muñiz Fontoira <dani@damufo.com>
+Date:   Mon Aug 5 12:32:39 2019 +0200
+
+    I18n: Update translation gl (100%).
+    
+    169 translated messages.
+    
+    Transifex (https://www.transifex.com/xfce/public/).
+
+commit f4cac4374475ab04137b132adf0641770106c04a
+Author: Simon Steinbeiss <simon.steinbeiss@elfenbeinturm.at>
+Date:   Thu Aug 1 00:13:09 2019 +0200
+
+    settings-dialog: Replace GtkStock buttons
+    
+    Bug: 15768
+    
+    Currently we don't get translations for the Help and Close buttons in
+    many dialogs.
+    
+    Replace the `GtkStock` items with our own label/image.
+
+commit ff637fbf7fa74b467c48f59c64279c173163e0e3
+Author: Kevin Brubeck Unhammer <unhammer+dill@mm.st>
+Date:   Wed Jul 31 12:33:37 2019 +0200
+
+    I18n: Update translation nn (100%).
+    
+    168 translated messages.
+    
+    Transifex (https://www.transifex.com/xfce/public/).
+
+commit a35afe06396510e6d1a0548d9e9e89e3eaaec097
+Author: Olivier Fourdan <fourdan@xfce.org>
+Date:   Sat Jul 27 16:49:00 2019 +0200
+
+    Post release tag bump
+    
+    Signed-off-by: Olivier Fourdan <fourdan@xfce.org>
+
 commit b1872fda18ce69a27d140fe7b4456318337f4a96
 Author: Olivier Fourdan <fourdan@xfce.org>
 Date:   Sat Jul 27 16:42:45 2019 +0200
@@ -715,7 +776,7 @@ Date:   Fri Jun 7 00:31:51 2019 +0200
     Transifex (https://www.transifex.com/xfce/public/).
 
 commit d68d3cbb676ab7eb548424cf37fd5eccbc274ddd
-Merge: a58d44fa 0a82935b
+Merge: a58d44fa1 0a82935b7
 Author: Olivier Fourdan <fourdan@xfce.org>
 Date:   Thu Jun 6 21:15:07 2019 +0200
 
@@ -8425,14 +8486,14 @@ Date:   Fri Mar 27 21:46:16 2015 +0100
     Signed-off-by: Olivier Fourdan <fourdan@xfce.org>
 
 commit bc03559e3e36fc8178f6ef0c0ab36fcd76c46e51
-Merge: c5a5ce0f 99cfe8dd
+Merge: c5a5ce0fd 99cfe8dd8
 Author: Olivier Fourdan <fourdan@xfce.org>
 Date:   Fri Mar 27 21:28:06 2015 +0100
 
     Merge branch 'scale-cursor'
 
 commit c5a5ce0fd8b4e59f99078f816bcc9e18d804df8c
-Merge: 104c6cec 8fbff6ce
+Merge: 104c6cecb 8fbff6ce0
 Author: Olivier Fourdan <fourdan@xfce.org>
 Date:   Fri Mar 27 21:22:25 2015 +0100
 
@@ -9661,7 +9722,7 @@ Date:   Thu Jan 22 12:31:59 2015 +0100
     Transifex (https://www.transifex.com/projects/p/xfce/).
 
 commit db626a73b286bd44b94dc3b9fc7556e0a695a4c1
-Merge: f079ff3c 82e44091
+Merge: f079ff3ce 82e440919
 Author: Olivier Fourdan <fourdan@xfce.org>
 Date:   Tue Jan 20 22:30:27 2015 +0100
 
@@ -9674,7 +9735,7 @@ Date:   Tue Jan 20 22:30:00 2015 +0100
     Unset RESTORE_SIZE_POS on resize.
 
 commit f079ff3ce479ea60b5771a1829e5e5d591b89550
-Merge: 8e809bac cd73bb72
+Merge: 8e809bac9 cd73bb720
 Author: Olivier Fourdan <fourdan@xfce.org>
 Date:   Tue Jan 20 21:55:47 2015 +0100
 
@@ -10591,7 +10652,7 @@ Date:   Sat Dec 6 00:32:07 2014 +0100
     Transifex (https://www.transifex.com/projects/p/xfce/).
 
 commit 61c2a6bf86f745f149ee81088116f56cda64d4e8
-Merge: 045e811f b6171c17
+Merge: 045e811f4 b6171c175
 Author: Olivier Fourdan <fourdan@xfce.org>
 Date:   Fri Dec 5 14:03:11 2014 +0100
 
@@ -13131,7 +13192,7 @@ Date:   Sun Dec 30 18:44:42 2012 +0100
     Transmitted-via: Transifex (translations.xfce.org).
 
 commit 8cd895fdd7f684d6a631e6d29a9f4f50a513da00
-Merge: d5f3b8f4 6b8259ee
+Merge: d5f3b8f4e 6b8259ee4
 Author: Jérôme Guelfucci <jeromeg@xfce.org>
 Date:   Sun Dec 30 15:37:15 2012 +0100
 
@@ -18553,7 +18614,7 @@ Date:   Sat Mar 6 12:51:48 2010 +0100
     Enforce link to libxfce4ui.
 
 commit fe18886f8a81a1d8f0814da56b932398ada68cfb
-Merge: 5b50425d 4f7a589a
+Merge: 5b50425d1 4f7a589a2
 Author: Olivier Fourdan <fourdan@xfce.org>
 Date:   Fri Mar 5 10:52:38 2010 +0100
 
@@ -19014,7 +19075,7 @@ Date:   Wed Jan 13 15:35:36 2010 +0100
     Transmitted-via: Transifex (translations.xfce.org).
 
 commit f9068ec3519ecf1b077f8868a0d997373966d683
-Merge: c1a867e6 cebe5f8d
+Merge: c1a867e65 cebe5f8d6
 Author: Stephan Arts <stephan@xfce.org>
 Date:   Sun Jan 10 10:22:34 2010 +0100
 
@@ -19098,7 +19159,7 @@ Date:   Tue Dec 15 10:54:31 2009 +0000
     Transmitted-via: Transifex (translations.xfce.org)
 
 commit 0a64813cd3cf69a54375ac8da939daa7f4b19d35
-Merge: 2d19268c cdabb3b3
+Merge: 2d19268c8 cdabb3b32
 Author: Nick Schermer <nick@xfce.org>
 Date:   Tue Dec 15 00:53:22 2009 +0100
 
@@ -19282,7 +19343,7 @@ Date:   Thu Sep 10 14:11:17 2009 +0200
     Sanitize build with -Wall -Werror
 
 commit 8d9cb7fdabb0229e5db46646fdf54124e9307021
-Merge: 9166f38e 0f625442
+Merge: 9166f38e4 0f6254422
 Author: Olivier Fourdan <fourdan@xfce.org>
 Date:   Wed Sep 9 20:48:23 2009 +0200
 
@@ -19371,7 +19432,7 @@ Date:   Thu Aug 20 03:15:01 2009 +0000
     Transmitted-via: Transifex (translations.xfce.org)
 
 commit a1f674d35d5cb8d85239c5427868a3a122a89303
-Merge: 34ed718c ad8be286
+Merge: 34ed718cb ad8be2860
 Author: Olivier Fourdan <fourdan@xfce.org>
 Date:   Mon Aug 17 17:23:32 2009 +0200
 
