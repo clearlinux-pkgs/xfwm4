@@ -5,8 +5,8 @@
 Name     : xfwm4
 Version  : 4.16.0
 Release  : 34
-URL      : https://archive.xfce.org/xfce/4.16/src/xfwm4-4.16.0.tar.bz2
-Source0  : https://archive.xfce.org/xfce/4.16/src/xfwm4-4.16.0.tar.bz2
+URL      : https://archive.xfce.org/src/xfce/xfwm4/4.16/xfwm4-4.16.0.tar.bz2
+Source0  : https://archive.xfce.org/src/xfce/xfwm4/4.16/xfwm4-4.16.0.tar.bz2
 Summary  : No detailed summary available
 Group    : Development/Tools
 License  : GPL-2.0
